@@ -1,0 +1,13 @@
+#login{
+    margin:  20%;
+    border: solid;
+    border-width: thin;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#login>form{
+    display: flex;
+    flex-direction: column;
+}
