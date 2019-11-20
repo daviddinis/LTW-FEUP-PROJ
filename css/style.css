@@ -1,11 +1,12 @@
 
 #footer {
     position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  
-  color: white;
-  text-align: right;
+    right: 30em;
+    bottom: 1em;
+    width: 100%;
+    background-color: red;
+    padding-right: 1em;
+    color: white;
+    text-align: right;
 }
 

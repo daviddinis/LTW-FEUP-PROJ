@@ -1,3 +1,5 @@
+<?php function draw_header() {
+  ?>
 <!-- DRAW HEADER -->
 <!DOCTYPE html>
 <html>
@@ -6,8 +8,6 @@
   <title>Botino</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300" rel="stylesheet">
 </head>
 
 <body>
@@ -18,13 +18,23 @@
     </header>
     <input type="text" placeholder="Search..">
   </div>
+<?php } ?>
 
+
+
+<?php function draw_footer() {
+  ?>
+
+  <!-- DRAW FOOTER -->
 
   <section id="footer">
-  <!-- DRAW FOOTER -->
+  <a href="#BecomeAHost">Rent your space</a>
+  <a href=#none>|</a>
   <a href="#about">About</a>
-  <a>|</a>
+  <a href=#none>|</a>
   <a href="#contact">Contact</a>
   </section>
   </body>
 </html> 
+
+<?php } ?>
