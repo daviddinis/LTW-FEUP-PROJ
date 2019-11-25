@@ -14,4 +14,6 @@
     </form>
 
   </section>
-<?php } ?>
+<?php } 
+draw_header();
+draw_login();?>

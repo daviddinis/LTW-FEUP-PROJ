@@ -1,8 +1,8 @@
-<?php function draw_signedUp() { 
+<?php function draw_signUp() { 
 /**
  * Draws the login section.
  */ ?>
-  <section id="login">
+  <section id="signup">
     
     <header><h2>Login</h2></header>
 
