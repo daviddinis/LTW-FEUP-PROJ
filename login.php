@@ -10,7 +10,7 @@
       <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="password" required>
       <input type="submit" value="Login">
-      <p>Don't have an account? <a href="signup.php">Signup!</a></p>
+      <p>Don't have an account? <a href="#SIGNUP">Signup!</a></p>
     </form>
 
   </section>
