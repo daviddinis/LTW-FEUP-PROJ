@@ -4,11 +4,11 @@
 <!-- DRAW HEADER -->
 <!DOCTYPE html>
 <html>
-<script src="js/form.js"></script>
+<script src="../js/form.js"></script>
 <head>
     <title>Botino</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Black Han Sans rel=' stylesheet'>
 </head>
 

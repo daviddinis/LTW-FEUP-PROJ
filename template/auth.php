@@ -14,7 +14,7 @@
         <input type="text" name="username" placeholder="username" required>
         <input type="password" name="password" placeholder="password" required>
         <button type="submit" class="btn">Login</button>
-        <p>Don't have an account? <a href="pages/signup.php">Signup!</a></p>
+        <p>Don't have an account? <a href="../pages/signup.php">Signup!</a></p>
     </form>
 
 </div>
