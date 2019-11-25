@@ -10,6 +10,7 @@
       <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="password" required>
       <input type="submit" value="Login">
+      <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
       <p>Already have an account? <a href="login.php">Login!</a></p>
     </form>
 

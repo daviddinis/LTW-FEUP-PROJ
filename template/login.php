@@ -2,18 +2,29 @@
 /**
  * Draws the login section.
  */ ?>
-  <section id="login">
-    
-    <header><h2>Login</h2></header>
 
-    <form method="post" action="../actions/action_login.php">
+  <button class="open-button" onclick="openForm()">Login</button>
+  <div class="login-popup" id="login">
+  
+    <form action="../actions/action_login.php" class="form-container">
+      <h2>Login</h2>
+      
       <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="password" required>
-      <input type="submit" value="Login">
+      <button type="submit" class="btn">Login</button>
+      <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
       <p>Don't have an account? <a href="#SIGNUP">Signup!</a></p>
     </form>
 
-  </section>
-<?php } 
-draw_header();
-draw_login();?>
+  </div>
+  <script>
+    function openForm() {
+      document.getElementById("login").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("login").style.display = "none";
+    }
+  </script>
+
+<?php } ?>
