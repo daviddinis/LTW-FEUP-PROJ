@@ -1,8 +1,8 @@
-<?php function draw_signedUp() { 
+<?php function draw_signUp() { 
 /**
  * Draws the login section.
  */ ?>
-  <section id="login">
+  <section id="signup">
     
     <header><h2>Login</h2></header>
 
@@ -10,6 +10,7 @@
       <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="password" required>
       <input type="submit" value="Login">
+      <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
       <p>Already have an account? <a href="login.php">Login!</a></p>
     </form>
 
