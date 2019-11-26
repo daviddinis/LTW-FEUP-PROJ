@@ -56,7 +56,7 @@ h1 {
   margin-top: 15%;
   margin-left: 25%;
   width: 26em;
-  height: 20em;
+  height: 22em;
   background-color: #fffbf0;
   -webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
   -moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
@@ -67,9 +67,16 @@ h1 {
   margin: 1em;
 }
 
-.searchbox>form * {
+input {
+
+  font: 400 13.3333px Arial;
+
+}
+
+
+.searchbox form * {
   margin: 0.1em;
-  padding: 1em;
+  padding: .4em;
 }
 
 #searchbuttom {}
