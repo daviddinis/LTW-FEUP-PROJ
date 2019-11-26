@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <script src="../js/form.js"></script>
+
 <head>
     <title>Botino</title>
     <meta charset="utf-8">
@@ -58,7 +59,7 @@
                 <label>Number of Guests</label>
                 <input type="number" name="guests" placeholder="1" required><br>
 
-                <input type="submit" value="Search">
+                <input id="searchbuttom" type="submit" value="Search">
             </form>
         </div>
         <?php
