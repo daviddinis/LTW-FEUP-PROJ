@@ -1,10 +1,20 @@
-function openForm() {
-    document.getElementById("auth").style.display = "block";
+function openLoginForm() {
+    let form = document.getElementsByClassName("auth-popup");
+    form[0].style.display = "block";
     document.getElementById("overlay").style.display = "block";
 }
 
+function openSignUpForm() {
+    let form = document.getElementsByClassName("auth-popup");
+    form[1].style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+}
+
+
 function closeForm() {
-    document.getElementById("auth").style.display = "none";
+    let form = document.getElementsByClassName("auth-popup");
+    form[0].style.display = "none";
+    form[1].style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }
 var box = document.querySelector(".form-container");
