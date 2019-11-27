@@ -18,7 +18,7 @@
     <div class="wrapper">
         <div class="topnav">
             <header>
-                <h1><a href=#HOMEPAGE></i> Botino</a></h1>
+                <h1><a href="../index.php"></i> Botino</a></h1>
             </header>
             <p> Slogan muito bonitão</p>
             <hr>
