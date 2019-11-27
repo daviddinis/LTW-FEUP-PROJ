@@ -8,7 +8,7 @@
 
 <div class="auth-popup" id="login">
 
-    <form action="../actions/action_login.php" class="form-container">
+    <form method="get" action="../actions/action_login.php" class="form-container">
         <h2>Login</h2>
 
         <input type="text" name="username" placeholder="username" required>
@@ -32,7 +32,7 @@
 
 <div class="auth-popup" id="signup">
 
-    <form method="post" action="../actions/action_login.php" class="form-container">
+    <form method="get" action="../actions/action_login.php" class="form-container">
         <h2>Register</h2>
         <input type="text" name="name" placeholder="name" required>
         <input type="text" name="username" placeholder="username" required>
