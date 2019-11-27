@@ -1,229 +1,292 @@
 /* GENERAL */
 
 hr {
-  border: 0.5em solid #ff8e00;
+	border: 0.5em solid #ff8e00;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
 }
 
 /* HEADER */
 h1 {
-  font-family: "Black Han Sans";
-  margin: 0;
-  padding: 0.5em;
-  padding-bottom: 0.1em;
+	font-family: "Black Han Sans";
+	margin: 0;
+	padding: 0.5em;
+	padding-bottom: 0.1em;
 }
 
 .topnav>p {
-  margin: 0em;
-  padding-left: 1em;
+	margin: 0em;
+	padding-left: 1em;
 }
 
 .topnav {
-  grid-area: 1 / 1 / span 1 / span 2;
-  background: #bf1616;
-  margin: 0em;
-  padding: 0em;
-
+	grid-area: 1 / 1 / span 1 / span 2;
+	background: #bf1616;
+	margin: 0em;
+	padding: 0em;
+	width: 100%;
 }
 
 .descrip {
-  grid-area: 2 / 2 / span 1 / span 1;
-  margin: 25%;
-  width: 25em;
-  height: 15em;
-  background-color: #fffbf0;
-  -webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
-  -moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
-  box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	grid-area: 2 / 2 / span 1 / span 1;
+	margin: 25%;
+	width: 25em;
+	height: 15em;
+	background-color: #fffbf0;
+	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 }
 
 #signup,
 #login {
-  color: black;
+	color: black;
 }
 
 .descrip>p {
-  margin: 1em;
+	margin: 1em;
 }
 
 /* SEARCHBOX */
 .searchbox {
-  grid-area: 2 / 1 / span 1 / span 1;
-  margin-top: 15%;
-  margin-left: 25%;
-  width: 26em;
-  height: 22em;
-  background-color: #fffbf0;
-  -webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
-  -moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
-  box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	grid-area: 2 / 1 / span 1 / span 1;
+	margin-top: 15%;
+	margin-left: 25%;
+	width: 26em;
+	height: 22em;
+	background-color: #fffbf0;
+	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 }
 
 #searchInput {
-  display: grid;
-  grid-template-columns: 50% 50%;
+	display: grid;
+	grid-template-columns: 50% 50%;
 }
 
 #searchInput>form>label {
-  grid-column-start: 1;
-  grid-column-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
 }
 
 .searchbox>h2 {
-  margin: 1em;
+	margin: 1em;
 }
 
 input {
-
-  font: 400 13.3333px Arial;
-
+	font: 400 13.3333px Arial;
 }
 
-
 .searchbox form * {
-  margin: 0.1em;
-  padding: .4em;
+	margin: 0.1em;
+	padding: 0.4em;
 }
 
 #searchbuttom {
-  background-color: #bf1616;
-  grid-column-start: 2;
-  margin-left: 55%;
-  color: white;
-  padding: 16px 0px;
-  border: none;
-  cursor: pointer;
-  width: 40%;
-  opacity: 1;
+	background-color: #bf1616;
+	grid-column-start: 2;
+	margin-left: 55%;
+	color: white;
+	padding: 16px 0px;
+	border: none;
+	cursor: pointer;
+	width: 40%;
+	opacity: 1;
 }
 
 /* BODY */
 
 body {
-  margin: 0em;
-  background-image: url("../1334321.png");
-  background-color: #fffbf0;
+	margin: 0em;
+	background-image: url("../1334321.png");
+	background-color: #fffbf0;
+	width: 100%;
 }
 
 .wrapper {
-  display: grid;
-  min-height: calc(100vh - 3em);
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 6em 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 0px;
+	display: grid;
+	min-height: calc(100vh - 3em);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 6em 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 0px;
 }
 
 /* FOOTER */
 #footer {
-  height: 1em;
+	height: 1em;
 
-  padding: 1em;
-  color: white;
-  text-align: right;
-  color: black;
-  text-decoration: none;
+	padding: 1em;
+	color: white;
+	text-align: right;
+	color: black;
+	text-decoration: none;
 }
 
-
-
 .overlay {
-  position: fixed;
-  display: none;
-  top: 0;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  background-color: rgba(0, 0, 0, .75)
+	position: fixed;
+	display: none;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-color: rgba(0, 0, 0, 0.75);
 }
 
 .open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  top: 23px;
-  right: 28px;
-
+	background-color: #555;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	grid-area: 1 / 2 / span 1 / span 1;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	width: 8em;
+	height: 3em;
 }
 
 p>a {
-  cursor: pointer;
-
+	cursor: pointer;
 }
 
-
 a:hover {
-  border: 1px solid;
+	border: 1px solid;
 }
 
 /* The popup form - hidden by default */
 .auth-popup {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
-  border: 3px solid #f1f1f1;
-  z-index: 100;
+	border: 3px solid #f1f1f1;
+	z-index: 100;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
 }
 
 /* Full-width input fields */
-.form-container input[type=text],
-.form-container input[type=password] {
-  width: 90%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #d4d4d4;
+.form-container input[type="text"],
+.form-container input[type="password"] {
+	width: 90%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #d4d4d4;
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus,
-.form-container input[type=password]:focus {
-  background-color: rgb(161, 161, 161);
-  outline: none;
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+	background-color: rgb(161, 161, 161);
+	outline: none;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  opacity: 0.8;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  opacity: 0.8;
+	background-color: #4caf50;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
 }
-
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover,
 .open-button:hover {
-  opacity: 1;
+	opacity: 1;
+}
+
+.profile {
+	background-color: #fffbf0;
+	grid-area: 2 / 1 / span 1 / span 2;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 2%);
+	width: 40%;
+	min-width: 30em;
+	height: 104%;
+
+	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+}
+
+.profile img {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 10%);
+
+	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+}
+
+.profile i {
+	position: relative;
+	left: 35%;
+	top: 2%;
+}
+
+.userInfo {
+	position: relative;
+	left: 50%;
+	transform: translate(-45%, 5%);
+}
+
+.reservation {
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	grid-template-rows: 1fr;
+	width: 90%;
+	height: 95px;
+	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	padding: 0.2em;
+}
+
+.reservation img {
+	grid-area: 1 / 1 / span 1 / span 1;
+	position: relative;
+	left: 50%;
+}
+
+.reservationInfo {
+	grid-area: 1 / 2 / span 1 / span 1;
+	margin: .3em;
+
+}
+
+.reservationInfo>label:nth-child(1) {
+	font-weight: bold;
+	font-size: 1.2em;
+
+}
+
+.reservationInfo>br:nth-child(2) {
+	display: block;
+	margin: .6em;
+}
+
+.reservationInfo>label {
+	font-weight: bold;
 }

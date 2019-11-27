@@ -10,14 +10,15 @@
     <title>Botino</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Black Han Sans rel=' stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Black Han Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
     <div class="wrapper">
         <div class="topnav">
             <header>
-                <h1><a href=#HOMEPAGE></i> Botino</a></h1>
+                <h1><a href="../index.php"></i> Botino</a></h1>
             </header>
             <p> Slogan muito bonitão</p>
             <hr>
