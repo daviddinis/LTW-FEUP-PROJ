@@ -1,8 +1,7 @@
 CREATE TABLE user (
     username VARCHAR PRIMARY KEY,
-    password VARCHAR, --PHP5.5 bcrypt
-    name VARCHAR,
-    photoURL VARCHAR --not sure about this
+    password VARCHAR NOT NULL, --PHP5.5 bcrypt
+    name VARCHAR
 );
 
 CREATE TABLE tourist (
