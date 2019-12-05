@@ -10,7 +10,6 @@
     <title>Botino</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Black Han Sans' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
