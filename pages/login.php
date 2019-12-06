@@ -7,8 +7,7 @@ include_once ('../template/tpl_auth.php');
 draw_header();
 draw_login();
 draw_signUp();
-draw_search();
-draw_maintext();
+draw_mainPage();
 draw_footer();
 
 ?>
