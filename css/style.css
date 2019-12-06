@@ -339,3 +339,25 @@ a:hover {
 .roomForm form {
 	margin:1em;
 }
+#roomForm > input:nth-child(2){
+	margin-left: 8.59em;
+	width: 18em;
+}
+#roomForm > input:nth-child(5){
+	margin-left: 6em;
+	width: 18em;
+}
+#roomForm > input:nth-child(8) {
+	margin-left: 2.28em;
+	width: 18em;
+}
+#roomForm > input:nth-child(11){
+	width: 18em;
+}
+#roomForm > textarea:nth-child(20){
+	margin-top: 0em;
+	min-width: 35em;
+	width: 35em;
+	max-width: 35em;
+	height: 15em;
+}
