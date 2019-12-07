@@ -22,6 +22,7 @@
                 </header>
                 <p> Slogan muito bonitão</p>
                 <hr>
+                <button class="open-button" onclick="openLoginForm()">Login</button><!--TODO: Display Profiel if loged in-->
             </div>
         </div>
         <?php
