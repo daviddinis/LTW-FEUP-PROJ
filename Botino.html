@@ -1,0 +1,175 @@
+<!-- DRAW HEADER -->
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="Botino_files/form.js"></script>
+
+
+    <title>Botino</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Botino_files/style.css">
+    <link rel="stylesheet" href="Botino_files/icon.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="topnav-wrapper">
+            <div class="topnav">
+                <header>
+                    <h1><a href="http://localhost:8000/index.php"> Botino</a></h1>
+                </header>
+                <p> Slogan muito bonitão</p>
+                <hr>
+            </div>
+        </div>
+        
+<button class="open-button" onclick="openLoginForm()">Login</button>
+
+<div class="auth-popup" id="login">
+
+    <form method="post" action="../actions/action_login.php" class="form-container">
+        <h2>Login</h2>
+
+        <input type="text" name="username" placeholder="username" required="" value="madeira">
+        <input type="password" name="password" placeholder="password" required="">
+        <button type="submit" class="btn">Login</button>
+        <p>Don't have an account? <a onclick="closeForm(); openSignUpForm();" "="">Signup!</a></p>
+    </form>
+
+</div>
+<div class=" overlay" id="overlay">
+</div>
+
+<div class="auth-popup" id="signup">
+
+    <form method="post" action="../actions/action_signup.php" class="form-container">
+        <h2>Register</h2>
+        <input type="text" name="name" placeholder="name" required="">
+        <input type="text" name="username" placeholder="username" required="" value="madeira">
+        <input type="password" name="password" placeholder="password" required="">
+        <button type="submit" class="btn">Register</button>
+        <p>Already have an account? <a onclick="closeForm(); openLoginForm();">Login!</a></p>
+    </form>
+</div>
+
+
+<div class="profile">
+    <img src="Botino_files/generic-profile-pic.png" alt="Profile picture" style="" width="180px" height="180px">
+    <i class="material-icons"></i>
+    <div class="userInfo">
+        <h2>Name</h2><br>
+        <label></label><br>
+        <h2>Username</h2><br>
+        <label>madeira</label><br>
+        <!-- <h2>Contacts</h2>
+        <label>Email: </label>antonio89@email.com<br>
+        <label>Phone: </label>999-999-999<br> -->
+
+        <h2>Reservation List</h2>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+        <div class="reservation">
+    <img src="Botino_files/1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <label>Quarto Bonito</label><br>
+        <label>Date</label> 23 Dez - 24 Dez<br>
+        <label>Number of guests</label> 3<br>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+    <!--Close Wrapper-->
+    <!-- DRAW FOOTER -->
+    <div class="footer">
+        <hr>
+        <div class="footerinfo">
+            <a href="#BecomeAHost">Rent your space</a>
+            |
+            <a href="#about">About</a>
+            |
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+
+
+
+</body></html>

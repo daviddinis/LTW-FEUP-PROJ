@@ -15,12 +15,14 @@
 
 <body>
     <div class="wrapper">
-        <div class="topnav">
-            <header>
-                <h1><a href="../index.php"></i> Botino</a></h1>
-            </header>
-            <p> Slogan muito bonitão</p>
-            <hr>
+        <div class="topnav-wrapper">
+            <div class="topnav">
+                <header>
+                    <h1><a href="../index.php"></i> Botino</a></h1>
+                </header>
+                <p> Slogan muito bonitão</p>
+                <hr>
+            </div>
         </div>
         <?php
 }?>
