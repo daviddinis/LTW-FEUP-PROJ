@@ -55,7 +55,6 @@
                     ante
                     massa. Nam ultrices fermentum lacus id pharetra. Nulla a purus at nibh viverra tempor. Mauris id
                     sollicitudin tortor. Nullam aliquam ligula eu velit lacinia, vitae ullamcorper quam accumsan. </p>
-                </form>
             </div>
         </div>
         <?php
