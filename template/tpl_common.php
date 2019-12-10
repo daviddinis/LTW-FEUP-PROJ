@@ -22,7 +22,15 @@
                 </header>
                 <p> Slogan muito bonitão</p>
                 <hr>
+                <?php if(!isset($_SESSION['username'])){ ?>
                 <button class="open-button" onclick="openLoginForm()">Login</button><!--TODO: Display Profiel if loged in-->
+                <?php } else {?>
+                    <div class="profilePreview" onclick="../user.php">
+                        <h3>Name</h3>
+                        <img src="../generic-profile-pic.png" alt="Profile picture"/>
+                        <button>Logout</button>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <?php

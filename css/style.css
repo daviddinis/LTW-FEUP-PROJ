@@ -386,3 +386,31 @@ a:hover {
 .roomInfo {
 	width: 50%;
 }
+
+.profilePreview {
+	display: flex;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	width: auto;
+	height: 7em;
+}
+
+.profilePreview img {
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	margin: 0em 0.5em;
+}
+
+.profilePreview button {
+	display: none;
+	position: absolute;
+	top:5.5em;
+	right: 0em;
+}
+
+.profilePreview:hover button{
+	display: block;
+
+}

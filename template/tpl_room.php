@@ -38,7 +38,7 @@
             ante
             massa. Nam ultrices fermentum lacus id pharetra. Nulla a purus at nibh viverra tempor. Mauris id
             sollicitudin tortor. Nullam aliquam ligula eu velit lacinia, vitae ullamcorper quam accumsan.</p>
-        <label>Price per night:</label> 16€
+        <h3>Price per night:</h3> 16€
         <form method="post" action="#CREATEROOM" id=rentForm>
             <label>Number of guests</label>
             <input type="number" name="guests" placeholder="Nº of guets" required><br>
