@@ -22,7 +22,8 @@
                 </header>
                 <p> Slogan muito bonitão</p>
                 <hr>
-                <button class="open-button" onclick="openLoginForm()">Login</button><!--TODO: Display Profiel if loged in-->
+                <button class="open-button" onclick="openLoginForm()">Login</button>
+                <!--TODO: Display Profiel if loged in-->
             </div>
         </div>
         <?php
@@ -34,15 +35,15 @@
         <div class="mainPage">
             <div class="searchbox">
                 <h2>Search</h2>
-                <form method="post" action="#SEARCHPHP" id=searchInput>
+                <form method="post" action="../pages/search.php" id=searchInput>
                     <label>Location</label>
                     <input type="text" name="location" placeholder="Where do you want to stay?" required>
                     <label>Check-in</label>
-                    <input type="date" name="checkin" placeholder="Check-in" required>
+                    <input type="date" name="checkin" placeholder="Check-in">
                     <label>Check-out</label>
-                    <input type="date" name="checkout" placeholder="Check-out" required>
+                    <input type="date" name="checkout" placeholder="Check-out">
                     <label>Number of Guests</label>
-                    <input type="number" name="guests" placeholder="1" required>
+                    <input type="number" name="guests" placeholder="1">
 
                     <input id="searchbuttom" type="submit" value="Search">
                 </form>
