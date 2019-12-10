@@ -4,8 +4,6 @@
      * Draws the login section.
      */?>
 
-<button class="open-button" onclick="openLoginForm()">Login</button>
-
 <div class="auth-popup" id="login">
 
     <form method="post" action="../actions/action_login.php" class="form-container">
