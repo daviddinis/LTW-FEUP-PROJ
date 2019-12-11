@@ -1,18 +1,13 @@
-CREATE TABLE user (
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE IF NOT EXISTS user (
     username VARCHAR PRIMARY KEY,
     password VARCHAR NOT NULL, --PHP5.5 bcrypt
     name VARCHAR
 );
 
-CREATE TABLE tourist (
-    username VARCHAR REFERENCES user
-);
 
-CREATE TABLE owner (
-    username VARCHAR REFERENCES user
-);
-
-CREATE TABLE reservation (
+CREATE TABLE IF NOT EXISTS reservation (
     resNo INTEGER PRIMARY KEY,
     checkIn INTEGER, --epoch format
     checkOut INTEGER, --epoch format
@@ -22,7 +17,7 @@ CREATE TABLE reservation (
     tourist VARCHAR REFERENCES tourist
 );
 
-CREATE TABLE place (
+CREATE TABLE IF NOT EXISTS place (
     ID INTEGER PRIMARY KEY,
     title VARCHAR,
     price REAL, --cost per night
@@ -30,5 +25,6 @@ CREATE TABLE place (
     description VARCHAR, 
     type VARCHAR, --House, apartment, etc
     photoURLlist VARCHAR, -- path to all images seperated by ','
-    owner VARCHAR REFERENCES owner
+    owner_username text,
+    foreign key(owner_username) references user(username)
 );
