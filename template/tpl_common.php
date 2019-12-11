@@ -1,4 +1,6 @@
-<?php function draw_header()
+<?php    include_once('../database/db_user.php');
+
+function draw_header()
 {
     ?>
 <!-- DRAW HEADER -->
@@ -27,7 +29,7 @@
                 <?php } else {?>
                 <div class="profilePreview" onclick="location.href ='../pages/user.php'" onmouseover="openDropDown()" onmouseout="closeDropDown()">
                     <h3><?php echo $_SESSION['username']?></h3>
-                    <img src="../generic-profile-pic.png" alt="Profile picture" />
+                    <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" />
                     <div class="dropDown">
                         <button>Logout</button>
                     </div>

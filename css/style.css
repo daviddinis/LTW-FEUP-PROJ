@@ -313,11 +313,6 @@ a:hover {
 	margin-bottom: 0em;
 }
 
-.reservationInfo * {
-	margin: 0;
-	height: 1em;
-}
-
 .reservationInfo > label:nth-child(1) {
 	font-weight: bold;
 	font-size: 1.2em;
