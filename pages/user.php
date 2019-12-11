@@ -8,12 +8,12 @@ include_once '../database/db_room.php';
 
 $username = $_SESSION['username'];
 $name = $_SESSION['name'];
-$reservations = getRoomsFromOwner($username);
+$places = getOwnerPlaces($username);
 
 draw_header();
 draw_login();
 draw_signUp();
-draw_profile($username, $name, $reservations);
+draw_profile($username, $name, $places);
 draw_footer();
 
 ?>

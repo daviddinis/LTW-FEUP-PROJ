@@ -2,20 +2,12 @@
   include_once('../includes/database.php');
 
 
-  /**
-   * Returns the items belonging to a certain list.
-   */
-  function getOwerRooms() {
-    $db = Database::instance()->db();
-    $stmt = $db->prepare('SELECT * FROM place WHERE owner_username = ?');
-    $stmt->execute(array($_SESSION['username']));
-    return $stmt->fetch(); 
-  }
+
 
   /**
    * Inserts a new list into the database.
    */
-  function insertRoom($title, $price, $location, $description, $type, $file) {
+  function insertPlace($title, $price, $location, $description, $type, $file) {
     $db = Database::instance()->db();
     $stmt = $db->prepare('INSERT INTO place(title, price, location, description, type, photoURLlist, owner_username) VALUES(?, ?, ?, ?, ?, ?, ?)');
     $stmt->execute(array($title, $price, $location, $description, $type, $file, $_SESSION['username']));
@@ -35,7 +27,7 @@
   /**
    * Returns a certain item from the database.
    */
-  function getRoomsFromOwner($owner_id) {
+  function getOwnerPlaces($owner_id) {
     $db = Database::instance()->db();
     $stmt = $db->prepare('SELECT * FROM place WHERE owner_username = ?');
     $stmt->execute(array($owner_id));

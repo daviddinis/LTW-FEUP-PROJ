@@ -1,4 +1,4 @@
-<?php function draw_profile($username, $name, $reservations) //get_user(id) do url
+<?php function draw_profile($username, $name, $places) //get_user(id) do url
 {?>
 <div class="profile">
     <img src="../generic-profile-pic.png" alt="Profile picture" width="180px" height="180px">
@@ -12,29 +12,29 @@
         <label>Email: </label>antonio89@email.com<br>
         <label>Phone: </label>999-999-999<br> -->
 
-        <h2>Reservation List</h2>
-        <?php draw_reservations($reservations)?><br>
+        <h2>My Places</h2>
+        <?php draw_places($places)?><br>
     </div>
 </div>
 <?php
 }?>
 
 
-<?php function draw_reservation($reservation) //get_reservation($res) 
+<?php function draw_place($place) //get_reservation($res) 
 {?>
 <div class="reservation">
     <img src="../1334321.png" alt="Room photo" width="80" height="80">
     <div class="reservationInfo">
-        <label>Title </label><?=$reservation['title']?><br>
-        <label>Date</label> 23 Dez - 24 Dez<br>
-        <label>Number of guests</label> 3<br>
+        <label>Title </label><?=$place['title']?><br>
+        <label>Location </label><?=$place['location']?><br>
+        <label>Price </label><?=$place['price']?><br>
     </div>
 </div>
 <?php
 }?>
 
 
-<?php function draw_reservations($reservations) //get_reservation($res) 
+<?php function draw_places($places) //get_reservation($res) 
 {?>
 <div class="reservations">
     <!-- <img src="../1334321.png" alt="Room photo" width="80" height="80"> -->
@@ -43,8 +43,8 @@
         <label>Date</label> 23 Dez - 24 Dez<br>
         <label>Number of guests</label> 3<br> -->
         <?php
-         foreach($reservations as $reservation)
-                draw_reservation($reservation); 
+         foreach($places as $place)
+                draw_place($place); 
         ?>
     </div>
 </div>

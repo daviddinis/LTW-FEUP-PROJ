@@ -17,7 +17,7 @@
 //   if (!checkIsListOwner($_SESSION['username'], $list_id))
 //     die(header('Location: ../pages/list.php'));
 
-  insertRoom($title, $price, $location, $type, $description, $file);
+  insertPlace($title, $price, $location, $type, $description, $file);
 
   header('Location: ../pages/user.php');
 ?>
