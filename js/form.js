@@ -27,3 +27,17 @@ document.addEventListener("click", function (event) {
     // If user clicks outside the element, hide it!
     closeForm();
 });
+
+function openDropDown() {
+    let dropDown = document.getElementsByClassName("dropDown");
+    dropDown[0].style.display = "block";
+    let profile = document.getElementsByClassName("profilePreview");
+    profile[0].style.height = "8em";
+}
+
+function closeDropDown() {
+    let form = document.getElementsByClassName("dropDown");
+    form[0].style.display = "none";
+    let profile = document.getElementsByClassName("profilePreview");
+    profile[0].style.height = "auto";
+}

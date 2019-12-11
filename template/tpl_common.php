@@ -25,11 +25,13 @@
                 <?php if(!isset($_SESSION['username'])){ ?>
                 <button class="open-button" onclick="openLoginForm()">Login</button><!--TODO: Display Profiel if loged in-->
                 <?php } else {?>
-                    <div class="profilePreview" onclick="../user.php">
-                        <h3>Name</h3>
-                        <img src="../generic-profile-pic.png" alt="Profile picture"/>
+                <div class="profilePreview" onclick="location.href = /pages/user.php" onmouseover="openDropDown()" onmouseout="closeDropDown()">
+                    <h3><?php echo $_SESSION['username']?></h3>
+                    <img src="../generic-profile-pic.png" alt="Profile picture" />
+                    <div class="dropDown">
                         <button>Logout</button>
                     </div>
+                </div>
                 <?php } ?>
             </div>
         </div>
