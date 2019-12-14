@@ -87,7 +87,9 @@ function draw_header()
             |
             <a href="#about">About</a>
             |
-            <a href="#contact">Contact</a>
+            <a href="../pages/createRoom.php">Create a Room</a>
+            |
+            <a href="../pages/roomPage.php">Check a room</a>
         </div>
     </div>
 </body>
