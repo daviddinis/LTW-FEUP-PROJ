@@ -9,7 +9,7 @@
 
     $_SESSION['username'] = $username;
     $_SESSION['messages'][] = array('type' => 'success', 'content' => 'Logged in successfully!');
-    header('Location: ../pages/user.php');
+    header('Location: ../pages/createRoom.php');
   } else {
     $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Login failed!');
     header('Location: ../pages/login.php');
