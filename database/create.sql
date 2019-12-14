@@ -29,6 +29,7 @@ CREATE TABLE place (
     location VARCHAR, --Address formated as "Country,City,Street,HouseNº,PostalCode"
     description VARCHAR, 
     type VARCHAR, --House, apartment, etc
+    guests INTEGER,
     photoURLlist VARCHAR, -- path to all images seperated by ','
     owner VARCHAR REFERENCES owner
 );

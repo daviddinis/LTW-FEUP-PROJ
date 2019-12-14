@@ -6,15 +6,15 @@ include_once '../template/tpl_auth.php';
 include_once '../template/tpl_search.php';
 include_once '../actions/action_search.php';
 
-$location = $_POST['location'];
-$datein = $_POST['checkin'];
-$dateout = $_POST['checkout'];
-$guests = $_POST['guests'];
+$searchArray['location'] = $_POST['location'];
+$searchArray['checkin'] = $_POST['checkin'];
+$searchArray['checkout'] = $_POST['checkout'];
+$searchArray['guests'] = $_POST['guests'];
 
-$places = search_database($location, $datein, $dateout, $guests);
+$places = search_database($searchArray);
 draw_header();
 draw_login();
 draw_signUp();
-draw_searchbar($location, $datein, $dateout, $guests);
+draw_searchbar($searchArray);
 draw_search_results($places);
 draw_footer();

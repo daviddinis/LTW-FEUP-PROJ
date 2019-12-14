@@ -26,20 +26,21 @@ function draw_placeItem($place)
 <?php
 }
 
-function draw_searchbar($location, $datein, $dateout, $guests)
+function draw_searchbar($searchArray)
 {
     ?>
 <div class="searchbar">
     <h2>Search</h2>
     <form method="post" action="../pages/search.php" id=searchbar>
         <label>Location</label>
-        <input type="text" name="location" placeholder="Where do you want to stay?" value="<?=$location?>" required>
+        <input type="text" name="location" placeholder="Where do you want to stay?"
+            value="<?=$searchArray['location']?>" required>
         <label>Check-in</label>
-        <input type="date" name="checkin" placeholder="Check-in" value="<?=$datein?>">
+        <input type="date" name="checkin" placeholder="Check-in" value="<?=$searchArray['checkin']?>">
         <label>Check-out</label>
-        <input type="date" name="checkout" placeholder="Check-out" value="<?=$dateout?>">
+        <input type="date" name="checkout" placeholder="Check-out" value="<?=$searchArray['checkout']?>">
         <label>Guests</label>
-        <input type="number" name="guests" placeholder="1" value="<?=$guests?>">
+        <input type="number" name="guests" placeholder="1" value="<?=$searchArray['guests']?>">
 
         <input id="searchbuttombar" type="submit" value="Search" href="search.php">
     </form>
