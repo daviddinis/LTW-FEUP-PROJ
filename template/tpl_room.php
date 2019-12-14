@@ -3,7 +3,7 @@
     ?>
 <div class="roomForm">
     <h2>Create your room</h2>
-    <form method="post" action="#CREATEROOM" id=roomForm>
+    <form method="post" action="../actions/action_create_room.php" id=searchInput>
         <label>Title</label>
         <input type="text" name="title" placeholder="Simple title for your place" required><br>
         <label>Location</label>
@@ -16,9 +16,10 @@
         <input type="radio" name="type" value="House" checked> House
         <input type="radio" name="type" value="Apartment"> Apartment
         <input type="radio" name="type" value="other"> Other<br>
-        <label>Description</label><br>
-        <textarea name="message" rows="4" cols="30"></textarea><br>
-        <input type="file" name="fileToUpload" id="fileToUpload" multiple><br>
+        <label>Description</label>
+        <textarea name="description" rows="4" cols="30"> 
+        </textarea><br>
+        <input type="file" name="fileToUpload" id="fileToUpload" multiple><br> 
         <input id="searchbuttom" type="submit" value="Search">
     </form>
 </div>

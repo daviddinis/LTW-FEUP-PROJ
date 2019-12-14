@@ -15,6 +15,15 @@
     return $user !== false && password_verify($password, $user['password']);
   }
 
+  function getNameFromUser($username) {
+    $db = Database::instance()->db();
+
+    $stmt = $db->prepare('SELECT name FROM user WHERE username = ?');
+    $stmt->execute(array($username));
+
+    return $stmt->fetch();
+  }
+
   function insertUser($username, $password, $name) {
     $db = Database::instance()->db();
 
