@@ -5,7 +5,7 @@
 	--bg-color: #fffbf0;
 }
 
-.topnav>hr {
+.topnav > hr {
 	border: 0.5em solid var(--hr-bar);
 }
 
@@ -23,11 +23,15 @@ h1 {
 	padding-bottom: 0.1em;
 }
 
-.topnav>p {
+.topnav > p {
 	margin: 0em;
 	padding-left: 1em;
 }
-
+.topnav hr {
+	-webkit-box-shadow: 0px 2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px 2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px 2px 5px 2px rgba(161, 161, 161, 0.51);
+}
 .topnav {
 	z-index: 5;
 	position: fixed;
@@ -72,7 +76,7 @@ h1 {
 	padding: 3em;
 }
 
-.descrip>p {
+.descrip > p {
 	margin: 0em;
 }
 
@@ -91,12 +95,12 @@ h1 {
 	grid-template-columns: 50% 50%;
 }
 
-#searchInput>form>label {
+#searchInput > form > label {
 	grid-column-start: 1;
 	grid-column-end: 1;
 }
 
-.searchbox>h2 {
+.searchbox > h2 {
 	margin: 1em;
 }
 
@@ -138,10 +142,10 @@ body {
 /* FOOTER */
 .footer hr {
 	margin: 0em;
-	/* position: relative;
-	top: 0em;
-	/* width: 100%; */
 	border: 0.5em solid var(--hr-bar);
+	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 }
 
 .footer {
@@ -158,7 +162,7 @@ body {
 
 .footer .footerinfo {
 	position: relative;
-	margin: .3em;
+	margin: 0.3em;
 	margin-right: 1em;
 }
 
@@ -187,7 +191,7 @@ body {
 	height: 3em;
 }
 
-p>a {
+p > a {
 	cursor: pointer;
 }
 
@@ -262,13 +266,13 @@ a:hover {
 	min-width: 30em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 5em; 
+	margin-bottom: 5em;
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(119, 93, 93, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 }
 
-.profile>img {
+.profile > img {
 	margin: auto;
 	display: block;
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
@@ -289,45 +293,37 @@ a:hover {
 .reservation {
 	display: flex;
 	background-color: var(--bg-color);
-	padding: .1em;
+	padding: 0.1em;
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	padding: 0.2em;
-	margin: .5em;
+	margin: 0.5em;
 }
 
 .reservation img {
-
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 }
 
 .reservationInfo {
-	margin: .1em;
-	margin-left: .5em;
+	margin: 0.1em;
+	margin-left: 0.5em;
 	margin-bottom: 0em;
 }
 
-.reservationInfo * {
-	margin: 0;
-	height: 1em;
-
-}
-
-.reservationInfo>label:nth-child(1) {
+.reservationInfo > label:nth-child(1) {
 	font-weight: bold;
 	font-size: 1.2em;
-
 }
 
-.reservationInfo>br:nth-child(2) {
+.reservationInfo > br:nth-child(2) {
 	display: block;
-	margin: .3em;
+	margin: 0.3em;
 }
 
-.reservationInfo>label {
+.reservationInfo > label {
 	font-weight: bold;
 }
 
@@ -349,33 +345,33 @@ a:hover {
 }
 
 .roomForm * {
-	margin: .5em;
+	margin: 0.5em;
 }
 
 .roomForm form {
 	margin: 1em;
 }
 
-#roomForm>input:nth-child(2) {
+#roomForm > input:nth-child(2) {
 	margin-left: 8.59em;
 	width: 18em;
 }
 
-#roomForm>input:nth-child(5) {
+#roomForm > input:nth-child(5) {
 	margin-left: 6em;
 	width: 18em;
 }
 
-#roomForm>input:nth-child(8) {
+#roomForm > input:nth-child(8) {
 	margin-left: 2.28em;
 	width: 18em;
 }
 
-#roomForm>input:nth-child(11) {
+#roomForm > input:nth-child(11) {
 	width: 18em;
 }
 
-#roomForm>textarea:nth-child(20) {
+#roomForm > textarea:nth-child(20) {
 	margin-top: 0em;
 	min-width: 35em;
 	width: 35em;
@@ -418,21 +414,19 @@ a:hover {
 
 .profilePreview h3 {
 	position: relative;
-	top: .6em;
+	top: 0.6em;
 }
 
 .dropDown {
 	display: none;
 	position: absolute;
-	top:5.5em;
+	top: 5.5em;
 	right: 0em;
 }
-
 
 .search_results {
 	position: fixed;
 	padding-left: 20em;
-
 }
 
 .searchbar {
@@ -454,6 +448,9 @@ a:hover {
 	padding-right: 1em;
 	padding-left: 1em;
 	background-color: var(--main-color);
+	-webkit-box-shadow: 2px 0px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 2px 0px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 2px 0px 5px 2px rgba(161, 161, 161, 0.51);
 }
 
 #searchbar {
@@ -465,12 +462,12 @@ a:hover {
 	padding: 1em 1em;
 }
 
-.searchbar>h2 {
+.searchbar > h2 {
 	padding: 0;
 	margin: 0;
 }
 
-#searchbar>input {
+#searchbar > input {
 	margin-left: 0;
 	margin-right: 0;
 }

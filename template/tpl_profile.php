@@ -1,7 +1,7 @@
 <?php function draw_profile($username, $name, $places) //get_user(id) do url
 {?>
 <div class="profile">
-        <img src="../generic-profile-pic.png" alt="Profile picture" width="180px" height="180px">
+        <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" width="180px" height="180px">
         <i class="material-icons">&#xe8b8;</i>
     <div class="userInfo">
         <h2>Name</h2>

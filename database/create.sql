@@ -2,8 +2,10 @@ PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS user (
     username VARCHAR PRIMARY KEY,
-    password VARCHAR NOT NULL, --PHP5.5 bcrypt
-    name VARCHAR
+    password VARCHAR NOT NULL,
+    name VARCHAR,
+    -- email VARCHAR, --TO BE IMPLEMENTED
+    photoURL VARCHAR DEFAULT "imageDatabase/userProfiles/default_profile_pic.png"
 );
 
 
