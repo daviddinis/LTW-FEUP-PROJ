@@ -3,7 +3,7 @@
     ?>
 <div class="roomForm">
     <h2>Create your room</h2>
-    <form method="post" action="../actions/action_create_room.php" id=searchInput>
+    <form method="post" action="../actions/action_create_room.php" id=searchInput enctype="multipart/form-data">
         <label>Title</label>
         <input type="text" name="title" placeholder="Simple title for your place" required><br>
         <label>Location</label>
@@ -19,8 +19,8 @@
         <label>Description</label>
         <textarea name="description" rows="4" cols="30"> 
         </textarea><br>
-        <!-- <input type="file" name="fileToUpload" id="fileToUpload" multiple><br>  -->
-        <input id="searchbuttom" type="submit" value="Search">
+        <input type="file" name="files[]" multiple><br>
+        <input id="searchbuttom" type="submit" value="Publish">
     </form>
 </div>
 <?php

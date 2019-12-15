@@ -1,6 +1,7 @@
 <?php
   include_once('../includes/session.php');
   include_once('../database/db_room.php');
+  include_once('../database/db_upload.php');
 
   // Verify if user is logged in
   if (!isset($_SESSION['username']))
@@ -18,6 +19,8 @@
 //     die(header('Location: ../pages/list.php'));
 
   insertPlace($title, $price, $location, $type, $description);
+  uploadRoomImages("../imageDatabase/roomPics/");
+
 
   header('Location: ../pages/user.php');
 ?>
