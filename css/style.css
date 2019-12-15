@@ -432,8 +432,8 @@ a:hover {
 }
 
 .search_results {
-	position: fixed;
-	padding-left: 20em;
+	position: absolute;
+	margin-left: 20em;
 }
 
 .searchbar {

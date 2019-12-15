@@ -36,22 +36,40 @@
 }?>
 
 
-<?php function draw_roomPage($place)
+<?php function draw_roomPage($place, $datein, $dateout, $price, $guests)
 {
     ?>
 <div class="roomPage">
     <div class="roomInfo">
         <h2><?=$place['title']?><br></h2>
         <h3>Price per night:</h3> <?=$place['price']?><br>
-        <form method="post" action="../pages/search.php" id=rentForm>
+        <!-- <form method="post" action="../actions/action_rent.php" id=rentForm>
             <label>Number of guests</label>
-            <!-- <input type="number" name="guests" placeholder="Nº of guets" required><br> -->
+            <input type="number" name="guests" placeholder="Nº of guets" required value="<?=$place['id']?>"><br>
             <label>Check-in</label>
-            <!-- <input type="date" name="checkin" placeholder="Check-in" required><br> -->
+            <input type="date" name="checkin" placeholder="Check-in" required value=<?=$datein?>><br>
             <label>Check-out</label>
-            <!-- <input type="date" name="checkout" placeholder="Check-out" required><br> -->
+            <input type="date" name="checkout" placeholder="Check-out" required value=<?=$dateout?>><br>
             <input id="rentButton" type="submit" value="Rent now!">
-        </form>
+        </form> -->
+
+        <form action="../actions/action_rent.php" method="get">
+        <label>Id: </label><?=$place['id']?><br>
+        <label>Title: </label><?=$place['title']?><br>
+        <label>Price: </label><?=$place['price']?><br>
+        <label>Location: </label><?=$place['location']?><br>
+        <label>Type: </label><?=$place['type']?><br>
+        <label>Owner: </label><?=$place['owner_username']?><br>
+        <label>datein: </label><?=$datein?><br>
+        <label>dateout: </label><?=$dateout?><br>
+        <label>guests: </label><?=$guests?><br>
+        <input type="hidden" name="id" value= <?=$place['id']?> />
+        <input type="hidden" name="datein" value= <?=$datein?> />
+        <input type="hidden" name="dateout" value= <?=$dateout?> />
+        <input type="hidden" name="guests" value= <?=$guests?> />
+        <input type="hidden" name="price" value= <?=$place['price']?> />
+        <input type="submit" value="Send data">
+
     </div>
     <div class="imageGalery">
         <img src="../1334321.png" alt="Room picture" width="180px" height="180px"><!-- FIX WITH media queries-->

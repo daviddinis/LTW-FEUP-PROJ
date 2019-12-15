@@ -10,12 +10,14 @@ CREATE TABLE IF NOT EXISTS user (
 
 CREATE TABLE IF NOT EXISTS reservation (
     resNo INTEGER PRIMARY KEY,
-    checkIn INTEGER, --epoch format
-    checkOut INTEGER, --epoch format
+    checkIn TEXT, --epoch format
+    checkOut TEXT, --epoch format
     guests INTEGER, --number of guests
-    cost REAL --cost of whole stay
-    placeID INTEGER REFERENCES places,
-    tourist VARCHAR REFERENCES tourist
+    cost REAL, --cost of whole stay
+    placeID INTEGER,
+    buyer_username VARCHAR,
+    foreign key(placeID) references place(id),
+    foreign key(buyer_username) references user(username)
 );
 
 CREATE TABLE IF NOT EXISTS place (

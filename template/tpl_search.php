@@ -1,15 +1,15 @@
 <?php
-function draw_search_results($places)
+function draw_search_results($places, $guests, $datein, $dateout)
 {
     ?>
 <div class="search_results">
     <?php foreach ($places as $place) {
-        draw_placeItem($place);
+        draw_placeItem($place, $guests, $datein, $dateout);
     }?>
 </div>
 <?php }
 
-function draw_placeItem($place)
+function draw_placeItem($place, $guests, $datein, $dateout)
 {
     ?>
 <div class="reservation">
@@ -20,10 +20,17 @@ function draw_placeItem($place)
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
-        <label>Owner: </label><?=$place['owner']?><br>
-        <!-- <input type="text" name="username" placeholder="username" required> -->
-
-        <button name="id" type="submit" value= <?=$place['id']?> >Submit</button>
+        <label>Owner: </label><?=$place['owner_username']?><br>
+        <label>datein: </label><?=$datein?><br>
+        <label>dateout: </label><?=$dateout?><br>
+        <label>guests: </label><?=$guests?><br>
+        <input type="hidden" name="id" value= <?=$place['id']?> />
+        <input type="hidden" name="datein" value= <?=$datein?> />
+        <input type="hidden" name="dateout" value= <?=$dateout?> />
+        <input type="hidden" name="guests" value= <?=$guests?> />
+        <input type="hidden" name="price" value= <?=$place['price']?> />
+        <input type="submit" value="Send data">
+        <!-- <button name="id" type="submit" value= <?=$place['id']?> >Submit</button> -->
 </form>
 
 
@@ -43,7 +50,6 @@ function draw_searchbar($location, $datein, $dateout, $guests)
 <div class="searchbar">
     <h2>Search</h2>
     <form method="post" action="../pages/search.php" id=searchbar>
-        <label>Location</label>
         <input type="text" name="location" placeholder="Where do you want to stay?" value="<?=$location?>" required>
         <label>Check-in</label>
         <input type="date" name="checkin" placeholder="Check-in" value="<?=$datein?>">
@@ -51,6 +57,7 @@ function draw_searchbar($location, $datein, $dateout, $guests)
         <input type="date" name="checkout" placeholder="Check-out" value="<?=$dateout?>">
         <label>Guests</label>
         <input type="number" name="guests" placeholder="1" value="<?=$guests?>">
+        <label>Location</label>
 
         <input id="searchbuttombar" type="submit" value="Search" href="search.php">
     </form>

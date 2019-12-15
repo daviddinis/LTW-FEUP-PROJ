@@ -44,6 +44,14 @@
     return $stmt->fetchAll();
   }
 
+
+  function getOwnerBookings($owner_id) {
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('SELECT * FROM reservation WHERE buyer_username = ?');
+    $stmt->execute(array($owner_id));
+    return $stmt->fetchAll();
+  }
+
   /**
    * Deletes a certain item from the database.
    */

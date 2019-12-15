@@ -17,5 +17,5 @@ draw_header();
 draw_login();
 draw_signUp();
 draw_searchbar($location, $datein, $dateout, $guests);
-draw_search_results($places);
+draw_search_results($places, $guests, $datein, $dateout);
 draw_footer();
