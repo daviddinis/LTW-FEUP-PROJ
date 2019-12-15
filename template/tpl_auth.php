@@ -33,7 +33,8 @@
     <form method="post" action="../actions/action_signup.php" class="form-container">
         <h2>Register</h2>
         <input type="text" name="name" placeholder="name" required>
-        <input type="text" name="username" placeholder="username" onkeyup="testeUsername(this.value);" required>
+        <input type="text" name="username" placeholder="username" style="margin:0" onkeyup="testeUsername(this.value);"
+            required>
         <span style="" id="userCheck"></span>
         <input type="password" name="password" placeholder="password" required>
         <button type="submit" class="btn">Register</button>

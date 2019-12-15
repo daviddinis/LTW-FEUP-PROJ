@@ -54,6 +54,16 @@ function testeUsername(usrName) {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("userCheck").innerHTML = this.responseText;
             }
+            let authButtons = document.getElementsByClassName("btn");
+            if (this.responseText != "") {
+                authButtons[0].disable = true;
+                authButtons[1].disable = true;
+                console.log("button disabled");
+            } else {
+                authButtons[0].disable = false;
+                authButtons[1].disable = false;
+                console.log("button enabled");
+            }
         };
         xmlhttp.open("GET", "../actions/action_check_user.php?user=" + usrName, true);
         xmlhttp.send();
