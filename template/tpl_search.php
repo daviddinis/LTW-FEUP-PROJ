@@ -59,7 +59,7 @@ function draw_searchbar($location, $datein, $dateout, $guests)
         <input type="number" name="guests" placeholder="1" value="<?=$guests?>">
         <label>Location</label>
 
-        <input id="searchbuttombar" type="submit" value="Search" href="search.php">
+        <input id="searchbuttombar" type="submit" value="Search">
     </form>
 </div>
 <?php

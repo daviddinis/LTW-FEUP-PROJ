@@ -3,6 +3,7 @@
 include_once '../includes/session.php';
 include_once '../template/tpl_common.php';
 include_once '../template/tpl_auth.php';
+include_once '../template/tpl_room.php';
 include_once '../template/tpl_search.php';
 include_once '../actions/action_search.php';
 
@@ -11,7 +12,8 @@ $datein = $_POST['checkin'];
 $dateout = $_POST['checkout'];
 $guests = $_POST['guests'];
 
-$places = getSearchResults($location);
+
+$places = getSearchResults($location, $datein, $dateout);
 
 draw_header();
 draw_login();
