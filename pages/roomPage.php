@@ -10,8 +10,6 @@ $id = $_GET['id'];
 
 $placeArray = getPlace($id);
 
-// cenas($placeArray[0]['id']);
-
 draw_header();
 draw_roomPage($placeArray[0]);
 draw_footer();

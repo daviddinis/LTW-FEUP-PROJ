@@ -13,9 +13,11 @@ function openSignUpForm() {
 
 function closeForm() {
     let form = document.getElementsByClassName("auth-popup");
+    if(form[0] != null){
     form[0].style.display = "none";
     form[1].style.display = "none";
     document.getElementById("overlay").style.display = "none";
+    }
 }
 var box = document.querySelector(".form-container");
 

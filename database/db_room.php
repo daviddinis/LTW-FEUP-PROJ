@@ -11,16 +11,22 @@
     $db = Database::instance()->db();
     $stmt = $db->prepare('INSERT INTO place(title, price, location, description, type, owner_username) VALUES(?, ?, ?, ?, ?, ?)');
     $stmt->execute(array($title, $price, $location, $description, $type, $_SESSION['username']));
+
   }
 
+
+  function getPlaceByTitle($title){
+  $db = Database::instance()->db();
+  $ret = $db->prepare('SELECT * FROM place where title = ?');
+  $ret->execute(array($title));
+  return $ret->fetchAll();
+  }
 
   function getPlace($id) {
     $db = Database::instance()->db();
     $stmt = $db->prepare('SELECT * FROM place WHERE id = ?');
     $stmt->execute(array($id));
     return $stmt->fetchAll();
-
-  
   }
 
   /**

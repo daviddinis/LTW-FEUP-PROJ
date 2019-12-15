@@ -7,7 +7,7 @@ include_once '../template/tpl_profile.php';
 include_once '../database/db_room.php';
 
 $username = $_SESSION['username'];
-$name = $_SESSION['name'];
+$name = getUser($username)['name'];
 $places = getOwnerPlaces($username);
 
 draw_header();
