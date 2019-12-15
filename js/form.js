@@ -41,3 +41,19 @@ function closeDropDown() {
     let profile = document.getElementsByClassName("profilePreview");
     profile[0].style.height = "auto";
 }
+
+function testeUsername(usrName) {
+    if (usrName.length < 3) {
+        document.getElementById("userCheck").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("userCheck").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "../actions/action_check_user.php?user=" + usrName, true);
+        xmlhttp.send();
+    }
+}
