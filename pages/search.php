@@ -11,7 +11,8 @@ $datein = $_POST['checkin'];
 $dateout = $_POST['checkout'];
 $guests = $_POST['guests'];
 
-$places = search_database($location, $datein, $dateout, $guests);
+$places = getSearchResults($location);
+
 draw_header();
 draw_login();
 draw_signUp();

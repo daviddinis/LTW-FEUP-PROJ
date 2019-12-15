@@ -20,13 +20,12 @@ CREATE TABLE IF NOT EXISTS reservation (
 );
 
 CREATE TABLE IF NOT EXISTS place (
-    ID INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     title VARCHAR,
     price REAL, --cost per night
     location VARCHAR, --Address formated as "Country,City,Street,HouseNº,PostalCode"
     description VARCHAR, 
     type VARCHAR, --House, apartment, etc
-    photoURLlist VARCHAR, -- path to all images seperated by ','
     owner_username text,
     foreign key(owner_username) references user(username)
 );

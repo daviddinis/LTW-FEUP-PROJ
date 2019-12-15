@@ -11,13 +11,13 @@
   $price = $_POST['price'];
   $type = $_POST['type'];
   $description = $_POST['description'];
-  $file = $_POST['file'];
+  // $file = $_POST['file'];
 
   // Verify if user owns the list
 //   if (!checkIsListOwner($_SESSION['username'], $list_id))
 //     die(header('Location: ../pages/list.php'));
 
-  insertPlace($title, $price, $location, $type, $description, $file);
+  insertPlace($title, $price, $location, $type, $description);
 
   header('Location: ../pages/user.php');
 ?>

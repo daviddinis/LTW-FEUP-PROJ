@@ -7,10 +7,20 @@
   /**
    * Inserts a new list into the database.
    */
-  function insertPlace($title, $price, $location, $description, $type, $file) {
+  function insertPlace($title, $price, $location, $description, $type) {
     $db = Database::instance()->db();
-    $stmt = $db->prepare('INSERT INTO place(title, price, location, description, type, photoURLlist, owner_username) VALUES(?, ?, ?, ?, ?, ?, ?)');
-    $stmt->execute(array($title, $price, $location, $description, $type, $file, $_SESSION['username']));
+    $stmt = $db->prepare('INSERT INTO place(title, price, location, description, type, owner_username) VALUES(?, ?, ?, ?, ?, ?)');
+    $stmt->execute(array($title, $price, $location, $description, $type, $_SESSION['username']));
+  }
+
+
+  function getPlace($id) {
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('SELECT * FROM place WHERE id = ?');
+    $stmt->execute(array($id));
+    return $stmt->fetchAll();
+
+  
   }
 
   /**

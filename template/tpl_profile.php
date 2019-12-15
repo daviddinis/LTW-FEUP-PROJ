@@ -39,9 +39,6 @@
 <div class="reservations">
     <!-- <img src="../1334321.png" alt="Room photo" width="80" height="80"> -->
     <div class="reservationInfo">
-        <!-- <label>Quarto Bonito</label><br>
-        <label>Date</label> 23 Dez - 24 Dez<br>
-        <label>Number of guests</label> 3<br> -->
         <?php
          foreach($places as $place)
                 draw_place($place); 
