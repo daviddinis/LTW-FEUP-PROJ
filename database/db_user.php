@@ -29,11 +29,20 @@
     return $stmt->fetch();
   }
 
-  function getUserPhoto($username){
+  function updateUser($user){
     $db = Database::instance()->db();
-    $stmt = $db->prepare('SELECT photoURL FROM user WHERE username = ?');
-    $stmt->execute(array($username));
-    $photo = $stmt->fetch();
-    return $photo['photoURL'];
+    $stmt = $db->prepare(' UPDATE user SET name = ?  WHERE username = ?');
+    $stmt->execute(array($user['name'],$user['username']));
+
   }
-?>
+
+  function getUserPhoto($username){
+    $path = glob("../imageDatabase/userProfiles/" . $username . ".*" );
+
+    if($path != null)
+      return $path[0];
+    else 
+      return "../imageDatabase/userProfiles/default_profile_pic.png";
+    
+  
+  }
