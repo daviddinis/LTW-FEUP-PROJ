@@ -42,7 +42,6 @@
 <div class="roomPage">
     <div class="roomInfo">
         <h2><?=$place['title']?><br></h2>
-        <h3>Price per night:</h3> <?=$place['price']?><br>
         <!-- <form method="post" action="../actions/action_rent.php" id=rentForm>
             <label>Number of guests</label>
             <input type="number" name="guests" placeholder="Nº of guets" required value="<?=$place['id']?>"><br>

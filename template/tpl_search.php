@@ -13,7 +13,8 @@ function draw_placeItem($place, $guests, $datein, $dateout)
 {
     ?>
 <div class="reservation">
-    <div class="plaInfo" onclick="window.location.href='../pages/roomPage.php?id=<?=$place['id']?>'">
+    <div class="plaInfo" >
+    <form action="../pages/roomPage.php" method="get">
         <label>Title: </label><?=$place['title']?><br>
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
@@ -28,7 +29,6 @@ function draw_placeItem($place, $guests, $datein, $dateout)
         <input type="hidden" name="guests" value= <?=$guests?> />
         <input type="hidden" name="price" value= <?=$place['price']?> />
         <input type="submit" value="Send data">
-        <!-- <button name="id" type="submit" value= <?=$place['id']?> >Submit</button> -->
 </form>
 
 
