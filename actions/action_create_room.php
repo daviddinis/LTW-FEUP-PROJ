@@ -1,5 +1,6 @@
 <?php
   include_once('../includes/session.php');
+  include_once('../database/db_upload.php');
   include_once('../database/db_room.php');
 
   // Verify if user is logged in
@@ -11,13 +12,16 @@
   $price = $_POST['price'];
   $type = $_POST['type'];
   $description = $_POST['description'];
-  // $file = $_POST['file'];
 
-  // Verify if user owns the list
-//   if (!checkIsListOwner($_SESSION['username'], $list_id))
-//     die(header('Location: ../pages/list.php'));
+  //Verify if user owns the list
+  //if (!checkIsListOwner($_SESSION['username'], $list_id))
+  //   die(header('Location: ../pages/list.php'));
 
-  insertPlace($title, $price, $location, $type, $description);
+  insertPlace($title, $price, $location,  $description, $type);
+
+  $id = getPlaceByTitle($title);
+
+  uploadRoomImages("../imageDatabase/roomPics/", $id[0]);
 
   header('Location: ../pages/user.php');
 ?>

@@ -13,9 +13,7 @@ function draw_placeItem($place, $guests, $datein, $dateout)
 {
     ?>
 <div class="reservation">
-    <div class="plaInfo">
-    <form action="../pages/roomPage.php" method="get">
-        <label>Id: </label><?=$place['id']?><br>
+    <div class="plaInfo" onclick="window.location.href='../pages/roomPage.php?id=<?=$place['id']?>'">
         <label>Title: </label><?=$place['title']?><br>
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
@@ -39,7 +37,6 @@ function draw_placeItem($place, $guests, $datein, $dateout)
 
     </div>
 </div>
-
 
 <?php
 }

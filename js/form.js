@@ -13,9 +13,11 @@ function openSignUpForm() {
 
 function closeForm() {
     let form = document.getElementsByClassName("auth-popup");
+    if(form[0] != null){
     form[0].style.display = "none";
     form[1].style.display = "none";
     document.getElementById("overlay").style.display = "none";
+    }
 }
 var box = document.querySelector(".form-container");
 
@@ -40,4 +42,20 @@ function closeDropDown() {
     form[0].style.display = "none";
     let profile = document.getElementsByClassName("profilePreview");
     profile[0].style.height = "auto";
+}
+
+function testeUsername(usrName) {
+    if (usrName.length < 3) {
+        document.getElementById("userCheck").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("userCheck").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "../actions/action_check_user.php?user=" + usrName, true);
+        xmlhttp.send();
+    }
 }

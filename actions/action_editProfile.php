@@ -20,6 +20,4 @@
     updateUser($updatedUser);
 
     header('Location: ../pages/user.php');
-
-    
 ?>

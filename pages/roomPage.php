@@ -14,8 +14,6 @@ $price = $_GET['price'];
 
 $placeArray = getPlace($id);
 
-// cenas($dateout);
-
 draw_header();
 draw_roomPage($placeArray[0], $datein, $dateout, $price, $guests);
 draw_footer();
