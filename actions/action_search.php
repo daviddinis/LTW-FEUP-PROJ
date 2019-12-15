@@ -1,15 +1,26 @@
 <?php
-include_once '../includes/database.php';
+// include_once '../includes/database.php';
+include_once('../includes/session.php');
+include_once('../database/db_search.php');
+include_once('../template/tpl_profile.php');
 
-function search_database($location, $datein, $dateout, $guests)
-{
 
-    $db = Database::instance()->db();
+// Verify if user is logged in
+if (!isset($_SESSION['username']))
+  die(header('Location: ../pages/login.php'));
 
-    $stmt = $db->prepare('SELECT title, price, location, type, owner FROM place WHERE location = ?');
-    $stmt->execute(array($location));
 
-    $places = $stmt->fetchAll();
-//print_r($places);
-    return $places;
+// $location = $_POST['location'];
+// $datein = $_POST['datein'];
+// $dateout = $_POST['dateout'];
+// $guests = $_POST['guests'];
+
+function getSearchResults($location) {
+  return search_database($location);
 }
+
+// function getPlace($id) {
+//   return search_database($id);
+// }
+
+// header('Location: ../pages/search.php');

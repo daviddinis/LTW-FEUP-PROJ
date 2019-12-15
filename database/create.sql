@@ -3,9 +3,8 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS user (
     username VARCHAR PRIMARY KEY,
     password VARCHAR NOT NULL,
-    name VARCHAR,
+    name VARCHAR
     -- email VARCHAR, --TO BE IMPLEMENTED
-    photoURL VARCHAR DEFAULT "imageDatabase/userProfiles/default_profile_pic.png"
 );
 
 
@@ -20,13 +19,12 @@ CREATE TABLE IF NOT EXISTS reservation (
 );
 
 CREATE TABLE IF NOT EXISTS place (
-    ID INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     title VARCHAR,
     price REAL, --cost per night
     location VARCHAR, --Address formated as "Country,City,Street,HouseNº,PostalCode"
     description VARCHAR, 
     type VARCHAR, --House, apartment, etc
-    photoURLlist VARCHAR, -- path to all images seperated by ','
     owner_username text,
     foreign key(owner_username) references user(username)
 );

@@ -3,7 +3,7 @@ function draw_search_results($places)
 {
     ?>
 <div class="search_results">
-    <?php foreach ($places as &$place) {
+    <?php foreach ($places as $place) {
         draw_placeItem($place);
     }?>
 </div>
@@ -12,16 +12,14 @@ function draw_search_results($places)
 function draw_placeItem($place)
 {
     ?>
-<div class="place">
-    <div class="plaInfo">
+<div class="reservation">
+    <div class="plaInfo" onclick="window.location.href='../pages/roomPage.php?id=<?=$place['id']?>'">
         <label>Title: </label><?=$place['title']?><br>
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
-        <label>Owner: </label><?=$place['owner']?><br>
     </div>
 </div>
-
 
 <?php
 }

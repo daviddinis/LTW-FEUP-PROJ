@@ -29,9 +29,9 @@ function insertUser($username, $password, $name)
 
     $options = ['cost' => 12];
 
-    $stmt = $db->prepare('INSERT INTO user VALUES(?, ?, ?, ?)');
-    $stmt->execute(array($username, password_hash($password, PASSWORD_DEFAULT, $options), $name, "../imageDatabase/userProfiles/default_profile_pic.png"));
-}
+    $stmt = $db->prepare('INSERT INTO user VALUES(?, ?, ?)');
+    $stmt->execute(array($username, password_hash($password, PASSWORD_DEFAULT, $options), $name));
+  }
 
 function getUser($username)
 {
@@ -42,17 +42,24 @@ function getUser($username)
     return $stmt->fetch();
 }
 
-function getUserPhoto($username)
-{
+  function updateUser($user){
     $db = Database::instance()->db();
-    $stmt = $db->prepare('SELECT photoURL FROM user WHERE username = ?');
-    $stmt->execute(array($username));
-    $photo = $stmt->fetch();
-    return $photo['photoURL'];
-}
+    $stmt = $db->prepare(' UPDATE user SET name = ?  WHERE username = ?');
+    $stmt->execute(array($user['name'],$user['username']));
 
-function testeUserSignUp($testeuser)
-{
+  }
+
+  function getUserPhoto($username){
+    $path = glob("../imageDatabase/userProfiles/" . $username . ".*" );
+
+    if($path != null)
+      return $path[0];
+    else 
+      return "../imageDatabase/userProfiles/default_profile_pic.png";
+    
+  }
+
+  function testeUserSignUp($testeuser){
     $db = Database::instance()->db();
     $stmt = $db->prepare('SELECT username FROM user WHERE username = ?');
     $stmt->execute(array($testeuser));
