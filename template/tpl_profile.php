@@ -7,7 +7,7 @@
     <i class="material-icons" onclick="location.href ='../pages/editProfile.php'">&#xe8b8;</i>
     <div class="userInfo">
         <h2>Name</h2>
-        <label><?=$name?></label>
+        <label><?=getUser($username)['name']?></label>
         <h2>Username</h2>
         <label><?=$username?></label>
         <!-- <h2>Contacts</h2>
@@ -39,7 +39,6 @@
 <?php function draw_places($places) //get_reservation($res) 
 {?>
 <div class="reservations">
-    <!-- <img src="../1334321.png" alt="Room photo" width="80" height="80"> -->
     <div class="reservationInfo">
         <?php
          foreach($places as $place)
@@ -65,7 +64,7 @@
             <input type="text" name="name" value=<?php echo $user['name']?> required>
             <h2>Username</h2>
             <label></label><?php echo $user['username']?> </label><br>
-            <input id="editbutton" type="submit" value="Save" href="user.php"> <!-- CHANGE DB-->
+            <input id="editbutton" type="submit" value="Save" href="user.php">
     </form>
 </div>
 <?php

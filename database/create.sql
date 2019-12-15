@@ -3,9 +3,8 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS user (
     username VARCHAR PRIMARY KEY,
     password VARCHAR NOT NULL,
-    name VARCHAR,
+    name VARCHAR
     -- email VARCHAR, --TO BE IMPLEMENTED
-    photoURL VARCHAR DEFAULT "imageDatabase/userProfiles/default_profile_pic.png"
 );
 
 

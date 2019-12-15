@@ -6,10 +6,9 @@
   $password = $_POST['password'];
 
   if (checkUserPassword($username, $password)) {
-
     $_SESSION['username'] = $username;
     $_SESSION['messages'][] = array('type' => 'success', 'content' => 'Logged in successfully!');
-    header('Location: ../pages/createRoom.php');
+    header('Location: ../pages/user.php');
   } else {
     $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Login failed!');
     header('Location: ../pages/login.php');

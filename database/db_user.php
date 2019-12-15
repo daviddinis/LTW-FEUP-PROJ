@@ -26,8 +26,8 @@
 
     $options = ['cost' => 12];
 
-    $stmt = $db->prepare('INSERT INTO user VALUES(?, ?, ?, ?)');
-    $stmt->execute(array($username, password_hash($password, PASSWORD_DEFAULT, $options), $name, "../imageDatabase/userProfiles/default_profile_pic.png"));
+    $stmt = $db->prepare('INSERT INTO user VALUES(?, ?, ?)');
+    $stmt->execute(array($username, password_hash($password, PASSWORD_DEFAULT, $options), $name));
   }
 
   function getUser($username){
@@ -53,5 +53,4 @@
     else 
       return "../imageDatabase/userProfiles/default_profile_pic.png";
     
-  
   }
