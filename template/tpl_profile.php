@@ -1,4 +1,4 @@
-<?php function draw_profile($username, $name, $places) //get_user(id) do url
+<?php function draw_profile($username, $name, $places, $bookings) //get_user(id) do url
 {?>
 <div class="profile">
     <div id="imageWrapper">
@@ -16,6 +16,10 @@
 
         <h2>My Places</h2>
         <?php draw_places($places)?><br>
+        
+        <h2>My Bookings</h2>
+        <?php draw_bookings($bookings)?><br>
+
     </div>
 </div>
 <?php
@@ -43,6 +47,35 @@
         <?php
          foreach($places as $place)
                 draw_place($place); 
+        ?>
+    </div>
+</div>
+<?php
+}?>
+
+<?php function draw_booking($booking) //get_reservation($res) 
+{?>
+<div class="reservation">
+    <img src="../1334321.png" alt="Room photo" width="80" height="80">
+    <div class="reservationInfo">
+        <!-- <label>Title </label><?=$booking['title']?><br>
+        <label>Location </label><?=$booking['location']?><br>
+        <label>Price </label><?=$booking['cost']?><br> -->
+        <label>Date in </label><?=$booking['checkIn']?><br>
+        <label>Date out </label><?=$booking['checkOut']?><br>
+    </div>
+</div>
+<?php
+}?>
+
+
+<?php function draw_bookings($bookings) //get_reservation($res) 
+{?>
+<div class="reservations">
+    <div class="reservationInfo">
+        <?php
+         foreach($bookings as $booking)
+                draw_booking($booking); 
         ?>
     </div>
 </div>

@@ -7,6 +7,7 @@ function draw_header()
 <!DOCTYPE html>
 <html>
 <script src="../js/form.js"></script>
+<script src="../js/animations.js"></script>
 
 <head>
     <title>Botino</title>
@@ -25,9 +26,11 @@ function draw_header()
                 <p> Slogan muito bonitão</p>
                 <hr>
                 <?php if(!isset($_SESSION['username'])){ ?>
-                <button class="open-button" onclick="openLoginForm()">Login</button><!--TODO: Display Profiel if loged in-->
+                <button class="open-button" onclick="openLoginForm()">Login</button>
+                <!--TODO: Display Profiel if loged in-->
                 <?php } else {?>
-                <div class="profilePreview" onclick="location.href ='../pages/user.php'" onmouseover="openDropDown()" onmouseout="closeDropDown()">
+                <div class="profilePreview" onclick="location.href ='../pages/user.php'" onmouseover="openDropDown()"
+                    onmouseout="closeDropDown()">
                     <h3><?php echo $_SESSION['username']?></h3>
                     <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" />
                     <div class="dropDown">
@@ -54,7 +57,7 @@ function draw_header()
                     <label>Check-out</label>
                     <input type="date" name="checkout" placeholder="Check-out">
                     <label>Number of Guests</label>
-                    <input type="number" name="guests" placeholder="1">
+                    <input type="number" name="guests" value="1" placeholder="1">
 
                     <input id="searchbuttom" type="submit" value="Search">
                 </form>

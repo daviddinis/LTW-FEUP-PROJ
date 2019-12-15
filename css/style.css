@@ -431,6 +431,11 @@ a:hover {
 	right: 0em;
 }
 
+.search_results {
+	position: absolute;
+	margin-left: 20em;
+}
+
 .searchbar {
 	height: 100%;
 	/* Full-height: remove this if you want "auto" height */
