@@ -8,7 +8,6 @@ include_once '../template/tpl_profile.php';
 include_once '../database/db_room.php';
 
 $username = $_SESSION['username'];
-$name = getUser($username)['name'];
 $places = getOwnerPlaces($username);
 $bookings = getOwnerBookings($username);
 
@@ -17,7 +16,7 @@ $bookings = getOwnerBookings($username);
 draw_header();
 draw_login();
 draw_signUp();
-draw_profile($username, $name, $places, $bookings);
+draw_profile($username, $places, $bookings);
 draw_footer();
 
 ?>
