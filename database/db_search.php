@@ -15,11 +15,15 @@ function search_database($location, $datein, $dateout) {
 
     // $stmt = $db->prepare('SELECT * FROM reservation, place WHERE location = ? and placeID=id EXCEPT SELECT * FROM reservation, place where (checkIn >= ? and checkOut <= ?) or (checkIn <= ? and checkOut >= ?)');
  
- 
-    $stmt = $db->prepare('SELECT * FROM reservation, place WHERE location = ? and placeID=id EXCEPT SELECT * FROM reservation, place where ? BETWEEN checkIn and checkOut or ? BETWEEN checkIn and checkOut or ? <= checkIn and ? >= checkOut');
-    
+    $query_location = '%'.$location.'%';
 
-    $stmt->execute(array($location, $in, $out, $in, $out));
+    cenas($query_location);
+ 
+    $stmt = $db->prepare('SELECT * FROM reservation, place WHERE location LIKE ? and placeID=id EXCEPT SELECT * FROM reservation, place where ? BETWEEN checkIn and checkOut or ? BETWEEN checkIn and checkOut or ? <= checkIn and ? >= checkOut');
+
+
+    $stmt->execute(array($query_location, $in, $out, $in, $out));
+    // $stmt->execute(array($in, $out, $in, $out));
     return $stmt->fetchAll();
 }
 
