@@ -1,13 +1,11 @@
 <?php    include_once('../database/db_user.php');
 
 function draw_header()
-{
-    ?>
+{ ?>
 <!-- DRAW HEADER -->
 <!DOCTYPE html>
 <html>
 <script src="../js/form.js"></script>
-<script src="../js/animations.js"></script>
 
 <head>
     <title>Botino</title>
@@ -27,14 +25,13 @@ function draw_header()
                 <hr>
                 <?php if(!isset($_SESSION['username'])){ ?>
                 <button class="open-button" onclick="openLoginForm()">Login</button>
-                <!--TODO: Display Profiel if loged in-->
                 <?php } else {?>
-                <div class="profilePreview" onclick="location.href ='../pages/user.php'" onmouseover="openDropDown()"
+                <div class="profilePreview" onclick="window.location.href ='../pages/user.php'" onmouseover="openDropDown()"
                     onmouseout="closeDropDown()">
                     <h3><?php echo $_SESSION['username']?></h3>
                     <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" />
                     <div class="dropDown">
-                        <a href='../actions/action_logout.php'>Logout</a>
+                        <button onclick="window.location.href='../actions/action_logout.php'">Logout</button>
                     </div>
                 </div>
                 <?php } ?>
