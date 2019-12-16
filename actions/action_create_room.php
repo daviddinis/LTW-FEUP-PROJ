@@ -12,12 +12,13 @@
   $price = $_POST['price'];
   $type = $_POST['type'];
   $description = $_POST['description'];
+  $maxGuests = $_POST['maxGuests'];
 
   //Verify if user owns the list
   //if (!checkIsListOwner($_SESSION['username'], $list_id))
   //   die(header('Location: ../pages/list.php'));
 
-  insertPlace($title, $price, $location,  $description, $type);
+  insertPlace($title, $price, $location,  $description, $type, $maxGuests);
 
   $id = getPlaceByTitle($title);
 
