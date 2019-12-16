@@ -30,7 +30,7 @@ function draw_placeItem($place, $guests, $datein, $dateout)
 <?php
 }
 
-function draw_searchbar($location, $datein, $dateout, $guests)
+function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPrice)
 {
     ?>
 <div class="searchbar">
@@ -45,10 +45,10 @@ function draw_searchbar($location, $datein, $dateout, $guests)
         <input type="number" name="guests" placeholder="1" value="<?=$guests?>">
         <div class="slidecontainer">
             <label>Min price</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="minPrice">
+            <input type="range" min="1" max="100" value="<?=$minPrice?>" class="slider" id="minPrice">
             <p>Value: <span id="valueMin"></span></p>
             <label>Max price</label>
-            <input type="range" min="1" max="100" value="50" class="slider" id="maxPrice">
+            <input type="range" min="1" max="100" value="<?=$maxPrice?>" class="slider" id="maxPrice">
             
             <p>Value: <span id="valueMax"></span></p>
         </div>

@@ -59,9 +59,9 @@ function draw_header()
                     <label>Number of Guests</label>
                     <input type="number" name="guests" value="1" placeholder="1">
                     <label>Min price</label>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="minPrice">
+                    <input type="range" min="1" max="100" value="50" class="slider" name="minPrice" id="minPrice">
                     <label>Max price</label>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="maxPrice">
+                    <input type="range" min="1" max="100" value="50" class="slider" name="maxPrice" id="maxPrice">
                     
 
                     <input id="searchbuttom" type="submit" value="Search">

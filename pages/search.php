@@ -20,6 +20,6 @@ $places = getSearchResults($location, $datein, $dateout);
 draw_header();
 draw_login();
 draw_signUp();
-draw_searchbar($location, $datein, $dateout, $guests);
+draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPrice);
 draw_search_results($places, $guests, $datein, $dateout);
 draw_footer();
