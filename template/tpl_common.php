@@ -32,7 +32,7 @@ function draw_header()
                     <h3><?php echo $_SESSION['username']?></h3>
                     <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" />
                     <div class="dropDown">
-                        <button onclick="window.location.href='../actions/action_logout.php'">Logout</button>
+                        <a href='../actions/action_logout.php'>Logout</a>
                     </div>
                 </div>
                 <?php } ?>
