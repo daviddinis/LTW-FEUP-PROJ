@@ -10,13 +10,14 @@ if (!isset($_SESSION['username']))
   die(header('Location: ../pages/login.php'));
 
 
-// $location = $_POST['location'];
-// $datein = $_POST['datein'];
-// $dateout = $_POST['dateout'];
-// $guests = $_POST['guests'];
+$location = $_POST['location'];
+$datein = $_POST['datein'];
+$dateout = $_POST['dateout'];
+$guests = $_POST['guests'];
 
-function getSearchResults($location) {
-  return search_database($location);
+
+function getSearchResults($location, $datein, $dateout) {
+  return search_database($location, $datein, $dateout);
 }
 
 // function getPlace($id) {
