@@ -10,14 +10,9 @@ function search_database($location, $datein, $dateout) {
     $in = strtotime($datein);
     $out = strtotime($dateout);
 
-    // cenas($datein);   
-    // cenas($dateout);
-
     // $stmt = $db->prepare('SELECT * FROM reservation, place WHERE location = ? and placeID=id EXCEPT SELECT * FROM reservation, place where (checkIn >= ? and checkOut <= ?) or (checkIn <= ? and checkOut >= ?)');
  
     $query_location = '%'.$location.'%';
-
-    cenas($query_location);
  
     $stmt = $db->prepare('SELECT * FROM reservation, place WHERE location LIKE ? and placeID=id EXCEPT SELECT * FROM reservation, place where ? BETWEEN checkIn and checkOut or ? BETWEEN checkIn and checkOut or ? <= checkIn and ? >= checkOut');
 

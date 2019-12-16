@@ -11,6 +11,8 @@ $location = $_POST['location'];
 $datein = $_POST['checkin'];
 $dateout = $_POST['checkout'];
 $guests = $_POST['guests'];
+$minPrice = $_POST['minPrice'];
+$maxPrice = $_POST['maxPrice'];
 
 
 $places = getSearchResults($location, $datein, $dateout);

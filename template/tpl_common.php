@@ -7,6 +7,7 @@ function draw_header()
 <!DOCTYPE html>
 <html>
 <script src="../js/form.js"></script>
+<script src="../js/slider.js"></script>
 
 <head>
     <title>Botino</title>
@@ -57,6 +58,11 @@ function draw_header()
                     <input type="date" name="checkout" placeholder="Check-out">
                     <label>Number of Guests</label>
                     <input type="number" name="guests" value="1" placeholder="1">
+                    <label>Min price</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="minPrice">
+                    <label>Max price</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="maxPrice">
+                    
 
                     <input id="searchbuttom" type="submit" value="Search">
                 </form>
