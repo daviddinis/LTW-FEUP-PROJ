@@ -15,8 +15,6 @@ $guests = $_POST['guests'];
 
 $places = getSearchResults($location, $datein, $dateout);
 
-cenas(sizeof($places));
-
 draw_header();
 draw_login();
 draw_signUp();

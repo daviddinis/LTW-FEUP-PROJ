@@ -72,7 +72,7 @@ function draw_roomImages($place)
     $dir = "../imageDatabase/roomPics/" . $place['owner_username'] . "/" . $place['id'] . "/";
 
     $files = scandir($dir);
-    cenas($files[2]);
+    // cenas($files[2]);
 
     for($index = 2; $index < count($files); $index++){
         echo "<img src=\"" . $dir . $files[$index] . "\" alt=\"Room Picture\" width=\"180px height=\"180px\">";
