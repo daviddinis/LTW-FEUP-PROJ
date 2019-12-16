@@ -280,7 +280,6 @@ a:hover {
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 }
 #imageWrapper img {
-	
 }
 
 .profile i {
@@ -290,13 +289,33 @@ a:hover {
 }
 
 #editbutton {
-	margin-top:1em;
+	margin-top: 1em;
 }
 
 .userInfo {
 	display: block;
 }
+.inline {
+	display: inline-block;
+}
+h2.inline:nth-child(6){
+	text-decoration: underline;
+}
 
+h2.inline:nth-child(7):hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+h2.inline:nth-child(6):hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#placesList {
+	display: none;
+}
 .reservation {
 	display: flex;
 	background-color: var(--bg-color);
@@ -466,7 +485,7 @@ a:hover {
 }
 
 #searchbar * {
-	padding: 1em 1em;
+	padding: 0.1em 0.1em;
 }
 
 .searchbar > h2 {
@@ -499,8 +518,7 @@ a:hover {
 	max-width: 170vh;
 }
 
-.roomDisplay{
-
+.roomDisplay {
 	width: 40vh;
 	background-color: var(--bg-color);
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
@@ -509,3 +527,41 @@ a:hover {
 	padding: 0.2em;
 	margin: 0.5em;
 }
+
+.slidecontainer {
+	width: 100%;
+  }
+  
+  .slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+  }
+  
+  .slider:hover {
+	opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: #4CAF50;
+	cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4CAF50;
+	cursor: pointer;
+  }
+
+  
+  

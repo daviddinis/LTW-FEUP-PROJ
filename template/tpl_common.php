@@ -1,12 +1,12 @@
 <?php    include_once('../database/db_user.php');
 
 function draw_header()
-{
-    ?>
+{ ?>
 <!-- DRAW HEADER -->
 <!DOCTYPE html>
 <html>
 <script src="../js/form.js"></script>
+<script src="../js/slider.js"></script>
 
 <head>
     <title>Botino</title>
@@ -26,14 +26,13 @@ function draw_header()
                 <hr>
                 <?php if(!isset($_SESSION['username'])){ ?>
                 <button class="open-button" onclick="openLoginForm()">Login</button>
-                <!--TODO: Display Profiel if loged in-->
                 <?php } else {?>
-                <div class="profilePreview" onclick="location.href ='../pages/user.php'" onmouseover="openDropDown()"
+                <div class="profilePreview" onclick="window.location.href ='../pages/user.php'" onmouseover="openDropDown()"
                     onmouseout="closeDropDown()">
                     <h3><?php echo $_SESSION['username']?></h3>
                     <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" />
                     <div class="dropDown">
-                        <a href='../actions/action_logout.php'>Logout</a>
+                        <button onclick="window.location.href='../actions/action_logout.php'">Logout</button>
                     </div>
                 </div>
                 <?php } ?>
@@ -57,6 +56,11 @@ function draw_header()
                     <input type="date" name="checkout" placeholder="Check-out">
                     <label>Number of Guests</label>
                     <input type="number" name="guests" value="1" placeholder="1">
+                    <label>Min price</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" name="minPrice" id="minPrice">
+                    <label>Max price</label>
+                    <input type="range" min="1" max="100" value="50" class="slider" name="maxPrice" id="maxPrice">
+                    
 
                     <input id="searchbuttom" type="submit" value="Search">
                 </form>

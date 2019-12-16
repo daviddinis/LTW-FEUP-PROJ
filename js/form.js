@@ -10,7 +10,6 @@ function openSignUpForm() {
     document.getElementById("overlay").style.display = "block";
 }
 
-
 function closeForm() {
     let form = document.getElementsByClassName("auth-popup");
     if (form[0] != null) {
@@ -19,6 +18,7 @@ function closeForm() {
         document.getElementById("overlay").style.display = "none";
     }
 }
+
 var box = document.querySelector(".form-container");
 
 // Detect all clicks on the document
@@ -53,7 +53,6 @@ function testeUsername(usrName) {
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("userCheck").innerHTML = this.responseText;
-                this.
             }
             let authButtons = document.getElementById("btn-signup");
             if (this.responseText != "valid username") {
@@ -67,4 +66,29 @@ function testeUsername(usrName) {
         xmlhttp.open("GET", "../actions/action_check_user.php?user=" + usrName, true);
         xmlhttp.send();
     }
+}
+
+function switchToPlacesView() {
+    let headers = document.getElementsByClassName("inline");
+    headers[1].style.textDecoration = "underline";
+    headers[0].style.textDecoration = "none";
+
+    let placeList = document.getElementById("placesList");
+    placeList.style.display = "block";
+
+    let bookingList = document.getElementById("bookingsList");
+    bookingList.style.display = "none";
+}
+
+
+function switchToBookingsView() {
+    let headers = document.getElementsByClassName("inline");
+    headers[1].style.textDecoration = "none";
+    headers[0].style.textDecoration = "underline";
+
+    let bookingList = document.getElementById("bookingsList");
+    bookingList.style.display = "block";
+
+    let placeList = document.getElementById("placesList");
+    placeList.style.display = "none";
 }
