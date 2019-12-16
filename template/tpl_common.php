@@ -7,7 +7,6 @@ function draw_header()
 <!DOCTYPE html>
 <html>
 <script src="../js/form.js"></script>
-<script src="../js/animations.js"></script>
 
 <head>
     <title>Botino</title>

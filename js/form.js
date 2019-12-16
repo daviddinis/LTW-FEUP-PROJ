@@ -13,10 +13,10 @@ function openSignUpForm() {
 
 function closeForm() {
     let form = document.getElementsByClassName("auth-popup");
-    if(form[0] != null){
-    form[0].style.display = "none";
-    form[1].style.display = "none";
-    document.getElementById("overlay").style.display = "none";
+    if (form[0] != null) {
+        form[0].style.display = "none";
+        form[1].style.display = "none";
+        document.getElementById("overlay").style.display = "none";
     }
 }
 var box = document.querySelector(".form-container");
@@ -54,14 +54,12 @@ function testeUsername(usrName) {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("userCheck").innerHTML = this.responseText;
             }
-            let authButtons = document.getElementsByClassName("btn");
-            if (this.responseText != "") {
-                authButtons[0].disable = true;
-                authButtons[1].disable = true;
+            let authButtons = document.getElementById("btn-signup");
+            if (this.responseText != "valid username") {
+                authButtons.type = 'button';
                 console.log("button disabled");
             } else {
-                authButtons[0].disable = false;
-                authButtons[1].disable = false;
+                authButtons.type = 'submit';
                 console.log("button enabled");
             }
         };

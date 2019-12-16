@@ -11,7 +11,7 @@
 
         <input type="text" name="username" placeholder="username" required>
         <input type="password" name="password" placeholder="password" required>
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn" id="btn-login">Login</button>
         <p>Don't have an account? <a onclick="closeForm(); openSignUpForm();"">Signup!</a></p>
     </form>
 
@@ -37,7 +37,7 @@
             required>
         <span style="" id="userCheck"></span>
         <input type="password" name="password" placeholder="password" required>
-        <button type="submit" class="btn">Register</button>
+        <button type="button" class="btn" id="btn-signup">Register</button>
         <p>Already have an account? <a onclick="closeForm(); openLoginForm();">Login!</a></p>
     </form>
 </div>
