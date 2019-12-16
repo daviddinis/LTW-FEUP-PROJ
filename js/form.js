@@ -67,3 +67,27 @@ function testeUsername(usrName) {
         xmlhttp.send();
     }
 }
+
+function switchToPlacesView() {
+    let headers = document.getElementsByClassName("inline");
+    headers[1].style.textDecoration = "underline";
+    headers[0].style.textDecoration = "none";
+
+	let placeList = document.getElementById("placesList");
+	placeList.style.display = "block";
+
+	let bookingList = document.getElementById("bookingsList");
+	bookingList.style.display = "none";
+}
+
+function switchToBookingsView() {
+    let headers = document.getElementsByClassName("inline");
+    headers[1].style.textDecoration = "none";
+    headers[0].style.textDecoration = "underline";
+
+	let bookingList = document.getElementById("bookingsList");
+    bookingList.style.display = "block";
+    
+	let placeList = document.getElementById("placesList");
+	placeList.style.display = "none";
+}
