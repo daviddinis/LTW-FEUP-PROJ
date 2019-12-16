@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS user (
 
 CREATE TABLE IF NOT EXISTS reservation (
     resNo INTEGER PRIMARY KEY,
-    checkIn TEXT, --epoch format
-    checkOut TEXT, --epoch format
+    checkIn DATE, --epoch format
+    checkOut DATE, --epoch format
     guests INTEGER, --number of guests
     cost REAL, --cost of whole stay
     placeID INTEGER,
