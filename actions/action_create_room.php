@@ -15,10 +15,6 @@
   $description =  test_input($_POST['description']);
   $maxGuests =  test_input($_POST['maxGuests']);
 
-  //Verify if user owns the list
-  //if (!checkIsListOwner($_SESSION['username'], $list_id))
-  //   die(header('Location: ../pages/list.php'));
-
   insertPlace($title, $price, $location,  $description, $type, $maxGuests);
 
   $id = getPlaceByTitle($title);

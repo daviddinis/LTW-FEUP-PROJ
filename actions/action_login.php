@@ -1,9 +1,10 @@
 <?php
   include_once('../includes/session.php');
   include_once('../database/db_user.php');
+  include_once('../actions/validation.php');
 
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $username = test_input($_POST['username']);
+  $password = test_input($_POST['password']);
 
   if (checkUserPassword($username, $password)) {
     $_SESSION['username'] = $username;
