@@ -48,11 +48,11 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
         <div class="slidecontainer">
             <label>Min price</label>
             <input type="range" min="1" max="100" value="<?=$minPrice?>" name="minPrice" class="slider" id="minPrice"
-                oninput="updateSlider('minPrice','valueMin')">
+                oninput="updateSlider()">
             <p>Value: <span id="valueMin"><?=$minPrice?></span></p>
             <label>Max price</label>
             <input type="range" min="1" max="100" value="<?=$maxPrice?>" name="maxPrice" class="slider" id="maxPrice"
-                oninput="updateSlider('maxPrice','valueMax')">
+                oninput="updateSlider()">
             <p>Value: <span id="valueMax"><?=$maxPrice?></span></p>
         </div>
         <input id="searchbuttombar" type="submit" value="Search">
