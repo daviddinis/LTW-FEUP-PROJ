@@ -93,14 +93,13 @@
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
         <label>Owner: </label><?=$place['owner_username']?><br>
-        <label>datein: </label><input type="date" name="datein" value=<?=$datein?> /><br>
-        <label>dateout: </label><input type="date" name="dateout" value=<?=$dateout?> /><br>
+        <label>datein: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date" name="datein" value=<?=$datein?> /><br>
+        <label>dateout: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date" name="dateout" value=<?=$dateout?> /><br>
         <label>guests: </label><input type="number" min="1" max="<?=$place['max_guests']?>" name="guests" value=<?=$guests?> /><br>
         <input type="hidden" name="id" value=<?=$place['id']?> />
-
         <input type="hidden" name="price" value=<?=$place['price']?> />
         <?php draw_roomImages($place)?><br>
-        <input type="submit" value="Send data">
+        <input type="submit" onclick="checkValidInfo()" id="submit" disabled="true" value="Send data">
     </form>
 </div>
 <?php

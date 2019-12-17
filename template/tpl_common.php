@@ -91,13 +91,7 @@ function draw_header()
     <div class="footer">
         <hr>
         <div class="footerinfo">
-            <a href="#BecomeAHost">Rent your space</a>
-            |
-            <a href="#about">About</a>
-            |
             <a href="../pages/createRoom.php">Create a Room</a>
-            |
-            <a href="../pages/roomPage.php">Check a room</a>
         </div>
     </div>
 </body>

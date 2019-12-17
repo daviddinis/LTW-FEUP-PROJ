@@ -66,7 +66,7 @@
             <label>Location </label><?= $place[0]['location'] ?><br>
             <label>Price </label><?= $booking['cost'] ?><br>
             <label>Date in </label><?= gmdate("M d, Y", $booking['checkIn']) ?><br>
-            <label>Date out </label><?= gmdate("M d, Y", $booking['checkIn']) ?><br>
+            <label>Date out </label><?= gmdate("M d, Y", $booking['checkOut']) ?><br>
         </div>
     </div>
     <?php }?>

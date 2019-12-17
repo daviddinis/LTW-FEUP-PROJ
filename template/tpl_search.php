@@ -12,6 +12,7 @@ function draw_search_results($places, $guests, $datein, $dateout)
 function draw_placeItem($place, $guests, $datein, $dateout)
 {
     ?>
+    <!-- ADD SECURITY -->
 <div class="roomDisplay"
     onclick="window.location.href='../pages/roomPage.php?id=<?= $place['id'] ?>&datein=<?=$datein?>&dateout=<?=$dateout?>&guests=<?=$guests?>'">
     <h3><?= $place['title'] ?></h3>
@@ -46,11 +47,12 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
         <input type="number" name="guests" placeholder="1" min="1" value="<?=$guests?>">
         <div class="slidecontainer">
             <label>Min price</label>
-            <input type="range" min="1" max="101" value="<?=$minPrice?>" name="minPrice" class="slider" id="minPrice" onchange="updateSlider()">
+            <input type="range" min="1" max="100" value="<?=$minPrice?>" name="minPrice" class="slider" id="minPrice"
+                oninput="updateSlider('minPrice','valueMin')">
             <p>Value: <span id="valueMin"><?=$minPrice?></span></p>
             <label>Max price</label>
-            <input  type="range" min="1" max="101" value="<?=$maxPrice?>" name="maxPrice" class="slider" id="maxPrice" onchange="updateSlider()">
-            
+            <input type="range" min="1" max="100" value="<?=$maxPrice?>" name="maxPrice" class="slider" id="maxPrice"
+                oninput="updateSlider('maxPrice','valueMax')">
             <p>Value: <span id="valueMax"><?=$maxPrice?></span></p>
         </div>
         <input id="searchbuttombar" type="submit" value="Search">
