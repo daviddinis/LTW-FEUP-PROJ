@@ -16,8 +16,8 @@ $dateout = $_POST['dateout'];
 $guests = $_POST['guests'];
 
 
-function getSearchResults($location, $datein, $dateout) {
-  return search_database($location, $datein, $dateout);
+function getSearchResults($location, $datein, $dateout, $guests, $min_price, $max_price) {
+  return search_database($location, $datein, $dateout, $guests, $min_price, $max_price);
 }
 
 // function getPlace($id) {
