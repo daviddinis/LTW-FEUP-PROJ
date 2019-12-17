@@ -90,16 +90,14 @@
                     <label>Id: </label><?=$place['id']?><br>
                     <label>Title: </label><?=$place['title']?><br>
                     <label>Price: </label><?=$place['price']?><br>
+                    <label>Max Guests: </label><?=$place['max_guests']?><br>
                     <label>Location: </label><?=$place['location']?><br>
                     <label>Type: </label><?=$place['type']?><br>
                     <label>Owner: </label><?=$place['owner_username']?><br>
-                    <label>datein: </label><input type="date" name="datein" value=<?=$datein?> /><br>
-                    <label>dateout: </label><input type="date" name="dateout" value=<?=$dateout?> /><br>
-                    <label>guests: </label><input type="number" name="guests" value=<?=$guests?> /><br>
+                    <!-- <label>datein: </label><input type="date" name="datein" value=<?=$datein?> /><br>
+                    <label>dateout: </label><input type="date" name="dateout" value=<?=$dateout?> /><br> -->
+                    <label>guests: </label><input type="number" min="1" max="<?=$place['max_guests']?>" name="guests" value=<?=$guests?> /><br>
                     <input type="hidden" name="id" value=<?=$place['id']?> />
-
-
-
                     <input type="hidden" name="price" value=<?=$place['price']?> />
                     <?php draw_roomImages($place)?><br>
                     <input type="submit" value="Send data">
