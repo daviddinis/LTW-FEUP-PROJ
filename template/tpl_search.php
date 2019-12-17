@@ -41,7 +41,7 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
         <label>Check-in</label>
         <input type="date" name="checkin" placeholder="Check-in" value="<?=$datein?>">
         <label>Check-out</label>
-        <input type="date" name="checkout" placeholder="Check-out" value="<?=$dateout?>">
+        <input type="date" name="checkout" onchange="checkDates()" placeholder="Check-out" value="<?=$dateout?>">
         <label>Guests</label>
         <input type="number" name="guests" placeholder="1" min="1" value="<?=$guests?>">
         <div class="slidecontainer">
