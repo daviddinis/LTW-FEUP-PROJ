@@ -5,21 +5,32 @@
     <h2>Create your room</h2>
     <form method="post" action="../actions/action_create_room.php" id=searchInput enctype="multipart/form-data">
         <label>Title</label>
-        <input type="text" name="title" placeholder="Simple title for your place" required><br>
+        <input type="text" name="title" placeholder="Simple title for your place" required>
         <label>Location</label>
-        <input type="text" name="location" placeholder="Country,City,Street,HouseNº,PostalCode" required> <br>
+        <input type="text" name="location" placeholder="Country,City,Street,HouseNº,PostalCode" required>
         <label>Price per night</label>
-        <input type="number" name="price" step="0.1" placeholder="€€€" required><br>
+        <input type="number" name="price" step="0.1" placeholder="€€€" required>
         <label>Number of guests</label>
-        <input type="number" name="maxGuests" placeholder="Nº of guets" required><br>
+        <input type="number" name="maxGuests" placeholder="Nº of guets" required>
         <label>Type of room</label>
-        <input type="radio" name="type" value="House" checked> House
-        <input type="radio" name="type" value="Apartment"> Apartment
-        <input type="radio" name="type" value="other"> Other<br>
+        <label>
+
+            <input type="radio" name="type" value="House" checked> House
+        </label>
+        <label></label>
+        <label>
+            <input type="radio" name="type" value="Apartment"> Apartment
+        </label>
+        <label></label>
+        <label>
+            <input type="radio" name="type" value="other"> Other
+        </label>
         <label>Description</label>
+        <label></label>
         <textarea name="description" rows="4" cols="30">
-        </textarea><br>
-        <input type="file" name="files[]" multiple><br>
+        </textarea>
+        <input type="file" name="files[]" multiple>
+        <label></label>
         <input id="submit" type="submit" value="Publish">
     </form>
 </div>
@@ -83,7 +94,7 @@
 }?> <?php function draw_roomPage($place, $datein, $dateout, $price, $guests)
 {
     ?>
-<div class="roomInfo">
+<div class="roomPage">
     <h2><?=$place['title']?><br></h2>
 
     <form action="../actions/action_rent.php" method="get">
