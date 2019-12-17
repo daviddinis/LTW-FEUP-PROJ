@@ -56,10 +56,10 @@ function draw_header()
                     <input type="date" name="checkout" placeholder="Check-out">
                     <label>Number of Guests</label>
                     <input type="number" name="guests" value="1" placeholder="1">
-                    <label>Min price</label>
-                    <input type="range" min="1" max="100" value="50" class="slider" name="minPrice" id="minPrice">
-                    <label>Max price</label>
-                    <input type="range" min="1" max="100" value="50" class="slider" name="maxPrice" id="maxPrice">
+                    <label>Min price <span id="valueMin">1</span></label>
+                    <input type="range" min="1" max="100" value="1" class="slider" name="minPrice" id="minPrice" oninput="updateSlider('minPrice','valueMin')">
+                    <label>Max price <span id="valueMax">100</span></label>
+                    <input type="range" min="1" max="100" value="100" class="slider" name="maxPrice" id="maxPrice" oninput="updateSlider('maxPrice','valueMax')">
                     
 
                     <input id="searchbuttom" type="submit" value="Search">

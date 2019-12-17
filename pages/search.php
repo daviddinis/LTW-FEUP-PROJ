@@ -15,7 +15,7 @@ $minPrice = $_POST['minPrice'];
 $maxPrice = $_POST['maxPrice'];
 
 
-$places = getSearchResults($location, $datein, $dateout);
+$places = getSearchResults($location, $datein, $dateout, $guests, $minPrice, $maxPrice);
 
 draw_header();
 draw_login();

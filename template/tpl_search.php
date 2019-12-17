@@ -42,34 +42,15 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
         <label>Check-out</label>
         <input type="date" name="checkout" placeholder="Check-out" value="<?=$dateout?>">
         <label>Guests</label>
-        <input type="number" name="guests" placeholder="1" value="<?=$guests?>">
-        <div class="slidecontainer">
+        <input type="number" name="guests" placeholder="1" min="1" value="<?=$guests?>">
+        <div class="slidecontainer" >
             <label>Min price</label>
-            <input type="range" min="1" max="100" value="<?=$minPrice?>" class="slider" id="minPrice">
-            <p>Value: <span id="valueMin"></span></p>
+            <input type="range" min="1" max="100" value="<?=$minPrice?>" name="minPrice" class="slider" id="minPrice" oninput="updateSlider('minPrice','valueMin')">
+            <p>Value: <span id="valueMin"><?=$minPrice?></span></p>
             <label>Max price</label>
-            <input type="range" min="1" max="100" value="<?=$maxPrice?>" class="slider" id="maxPrice">
-            
-            <p>Value: <span id="valueMax"></span></p>
+            <input  type="range" min="1" max="100" value="<?=$maxPrice?>" name="maxPrice" class="slider" id="maxPrice" oninput="updateSlider('maxPrice','valueMax')">
+            <p>Value: <span id="valueMax"><?=$maxPrice?></span></p>
         </div>
-        <script>
-            var sliderMin = document.getElementById("minPrice");
-            var sliderMax = document.getElementById("maxPrice");
-            var outputMin = document.getElementById("valueMin");
-            var outputMax = document.getElementById("valueMax");
-            outputMin.innerHTML = sliderMin.value;
-            outputMax.innerHTML = sliderMax.value;
-
-            sliderMin.oninput = function() {
-            outputMin.innerHTML = this.value;
-            }
-
-            sliderMax.oninput = function() {
-            outputMax.innerHTML = this.value;
-            }
-        </script>
-
-
         <input id="searchbuttombar" type="submit" value="Search">
     </form>
 </div>
