@@ -59,12 +59,13 @@
         <label>Type: </label><?=$place['type']?><br>
         <textarea name="description" rows="4" cols="30" value="<?=$place['description']?>">
             </textarea><br>
-
         <?php draw_roomImages($place)?><br>
+        <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
         <input id="submit" type="submit" value="Update">
     </form>
     <form action="../actions/action_removeRoom.php" method="post">
-        <input type="hidden" name="id" value="<?=$place['id']?>">
+    <input type="hidden" name="id" value="<?=$place['id']?>">
+    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
         <button type="submit" class="buttonDelete"> <i class=" material-icons" type="submit">delete</i></button>
     </form>
 </div>
