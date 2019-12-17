@@ -58,6 +58,15 @@
     return $stmt->fetchAll();
   }
 
+
+  function updateRoom($room){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare(' UPDATE place SET title = ?, max_guests = ?, price = ?, description = ?  WHERE id = ?');
+    $stmt->execute(array($room['title'], $room['guests'], $room['price'], $room['description'], $room['id']));
+
+}
+
+
   /**
    * Deletes a certain item from the database.
    */
