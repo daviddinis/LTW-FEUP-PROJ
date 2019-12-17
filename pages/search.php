@@ -7,13 +7,12 @@ include_once '../template/tpl_room.php';
 include_once '../template/tpl_search.php';
 include_once '../actions/action_search.php';
 
-$location = $_POST['location'];
-$datein = $_POST['checkin'];
-$dateout = $_POST['checkout'];
-$guests = $_POST['guests'];
-$minPrice = $_POST['minPrice'];
-$maxPrice = $_POST['maxPrice'];
-
+$location = $_GET['location'];
+$datein = $_GET['checkin'];
+$dateout = $_GET['checkout'];
+$guests = $_GET['guests'];
+$minPrice = $_GET['minPrice'];
+$maxPrice = $_GET['maxPrice'];
 
 $places = getSearchResults($location, $datein, $dateout, $guests, $minPrice, $maxPrice);
 
