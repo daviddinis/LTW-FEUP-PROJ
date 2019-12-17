@@ -8,11 +8,9 @@ function checkDates() {
 
     let dateIn = new Date(document.getElementsByName("checkin")[0].value);
     let dateOut = new Date(document.getElementsByName("checkout")[0].value);
-    console.log(dateOut);
-    console.log(dateIn);
     
     if (dateIn > dateOut) {
-        console.log("WRONG");
+        alert("You checkout must be after your checkin!");
         document.getElementsByName("checkout")[0].value = document.getElementsByName("checkin")[0].value;
 
     }
