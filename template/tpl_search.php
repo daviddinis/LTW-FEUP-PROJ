@@ -49,7 +49,6 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
             <p>Value: <span id="valueMin"></span></p>
             <label>Max price</label>
             <input type="range" min="1" max="100" value="<?=$maxPrice?>" class="slider" id="maxPrice">
-            
             <p>Value: <span id="valueMax"></span></p>
         </div>
         <script>
