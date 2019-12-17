@@ -42,14 +42,13 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
         <label>Check-out</label>
         <input type="date" name="checkout" placeholder="Check-out" value="<?=$dateout?>">
         <label>Guests</label>
-        <input type="number" name="guests" placeholder="1" value="<?=$guests?>">
+        <input type="number" name="guests" placeholder="1" min="1" value="<?=$guests?>">
         <div class="slidecontainer" >
             <label>Min price</label>
             <input type="range" min="1" max="100" value="<?=$minPrice?>" name="minPrice" class="slider" id="minPrice" oninput="updateSlider('minPrice','valueMin')">
             <p>Value: <span id="valueMin"><?=$minPrice?></span></p>
             <label>Max price</label>
             <input  type="range" min="1" max="100" value="<?=$maxPrice?>" name="maxPrice" class="slider" id="maxPrice" oninput="updateSlider('maxPrice','valueMax')">
-            
             <p>Value: <span id="valueMax"><?=$maxPrice?></span></p>
         </div>
         <input id="searchbuttombar" type="submit" value="Search">
