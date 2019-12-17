@@ -2,13 +2,14 @@
 include_once '../includes/session.php';
 include_once '../database/db_upload.php';
 include_once '../database/db_room.php';
+include_once('../actions/validation.php');
 
-$newRoom['id'] = $_GET['id'];
-$newRoom['title'] = $_GET['title'];
-$newRoom['price'] = $_GET['price'];
-$newRoom['guests'] = $_GET['guests'];
-$newRoom['description'] = $_GET['description'];
-print_r($newRoom);
+
+$newRoom['id'] = test_input($_GET['id']);
+$newRoom['title'] = test_input($_GET['title']);
+$newRoom['price'] = test_input($_GET['price']);
+$newRoom['guests'] = test_input($_GET['guests']);
+$newRoom['description'] = test_input($_GET['description']);
 
 updateRoom($newRoom);
 

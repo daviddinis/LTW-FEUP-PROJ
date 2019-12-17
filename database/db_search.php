@@ -11,11 +11,6 @@ function search_database($location, $datein, $dateout, $guests, $min_price, $max
     $in = strtotime($datein);
     $out = strtotime($dateout);
 
-    // cenas($guests);
-    // cenas($min_price);
-    // cenas($max_price);
-
-    // $stmt = $db->prepare('SELECT * FROM reservation, place WHERE location = ? and placeID=id EXCEPT SELECT * FROM reservation, place where (checkIn >= ? and checkOut <= ?) or (checkIn <= ? and checkOut >= ?)');
 
     $query_location = '%' . $location . '%';
 
@@ -27,6 +22,32 @@ function search_database($location, $datein, $dateout, $guests, $min_price, $max
     $stmt->execute(array($query_location, $_SESSION['username'], $guests, $max_price, $min_price, $in, $out, $in, $out));
 
     return $stmt->fetchAll();
+}
+
+function available_place($placeId, $datein, $dateout)
+{
+
+    $db = Database::instance()->db();
+
+    // cenas($datein);
+
+    $in = $datein;
+    $out = $dateout;
+
+    $stmt = $db->prepare('SELECT id, title, price, location, description, type, owner_username FROM place WHERE
+      id = ? EXCEPT 
+      SELECT id, title, price, location, description, type, owner_username FROM reservation, place where placeID=id and id= ? and ? BETWEEN checkIn and checkOut or ? BETWEEN checkIn and checkOut or ? <= checkIn and ? >= checkOut');
+
+    // $stmt = $db->prepare('SELECT * FROM place');
+
+    $stmt->execute(array($placeId, $placeId, $in, $out, $in, $out));
+    
+    // $stmt->execute();
+    
+    $ret = $stmt->fetchAll();
+
+    cenas($ret[0]['id']);
+    return $ret;
 }
 
 // function convertToDate($unix) {

@@ -58,14 +58,15 @@
 {
     $place = getPlace($booking['placeID']);
     ?>
-    <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=$place[0]['id']?>'">
+        <!-- ADD SECURITY -->
+    <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=urlencode($place[0]['id'])?>'">
         <img src="../1334321.png" alt="Room photo" width="80" height="80">
         <div class="reservationInfo">
             <label>Title </label><?= $place[0]['title'] ?><br>
             <label>Location </label><?= $place[0]['location'] ?><br>
             <label>Price </label><?= $booking['cost'] ?><br>
             <label>Date in </label><?= gmdate("M d, Y", $booking['checkIn']) ?><br>
-            <label>Date out </label><?= gmdate("M d, Y", $booking['checkIn']) ?><br>
+            <label>Date out </label><?= gmdate("M d, Y", $booking['checkOut']) ?><br>
         </div>
     </div>
     <?php }?>
