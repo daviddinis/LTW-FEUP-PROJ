@@ -2,9 +2,9 @@
     include_once('../includes/session.php');
     include_once('../database/db_upload.php');
     include_once('../database/db_user.php');
+    include_once('../actions/validation.php');
 
-    
-    $name = $_POST['name'];
+    $name = test_input($_POST['name']);
     
     $user = getUser($_SESSION['username']);
     $updatedUser = new ArrayObject();

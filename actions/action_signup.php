@@ -1,10 +1,11 @@
 <?php
   include_once('../includes/session.php');
   include_once('../database/db_user.php');
+  include_once('../actions/validation.php');
 
-  $name = $_POST['name'];
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $name = test_input($_POST['name']);
+  $username = test_input($_POST['username']);
+  $password = test_input($_POST['password']);
 
 
   // Don't allow certain characters
