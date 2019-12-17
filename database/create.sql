@@ -28,5 +28,6 @@ CREATE TABLE IF NOT EXISTS place (
     description VARCHAR, 
     type VARCHAR, --House, apartment, etc
     owner_username text,
+    max_guests INTEGER,
     foreign key(owner_username) references user(username)
 );

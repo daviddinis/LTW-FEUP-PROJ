@@ -7,10 +7,10 @@
   /**
    * Inserts a new list into the database.
    */
-  function insertPlace($title, $price, $location, $description, $type) {
+  function insertPlace($title, $price, $location, $description, $type, $maxGuests) {
     $db = Database::instance()->db();
-    $stmt = $db->prepare('INSERT INTO place(title, price, location, description, type, owner_username) VALUES(?, ?, ?, ?, ?, ?)');
-    $stmt->execute(array($title, $price, $location, $description, $type, $_SESSION['username']));
+    $stmt = $db->prepare('INSERT INTO place(title, price, location, description, type, owner_username, max_guests) VALUES(?, ?, ?, ?, ?, ?, ?)');
+    $stmt->execute(array($title, $price, $location, $description, $type, $_SESSION['username'], $maxGuests));
 
   }
 

@@ -11,7 +11,7 @@
         <label>Price per night</label>
         <input type="number" name="price" step="0.1" placeholder="€€€" required><br>
         <label>Number of guests</label>
-        <input type="number" name="guests" placeholder="Nº of guets" required><br>
+        <input type="number" name="maxGuests" placeholder="Nº of guets" required><br>
         <label>Type of room</label>
         <input type="radio" name="type" value="House" checked> House
         <input type="radio" name="type" value="Apartment"> Apartment
