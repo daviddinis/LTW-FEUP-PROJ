@@ -35,37 +35,80 @@
 <?php
 }?>
 
-
-<?php function draw_roomPage($place, $datein, $dateout, $price, $guests)
+<?php function draw_editRoom($place)
 {
     ?>
-<div class="roomPage">
+<div class="roomForm">
+    <form action="../actions/action_editRoom.php" method="get">
+        <label>Id: </label><?=$place['id']?><input type="hidden" name="id" value=<?=$place['id']?> /><br>
+        <label>Title: </label><input type="text" name="title" value="<?=$place['title']?>"><br>
+        <label>Price: </label><input type="number" name="price" value="<?=$place['price']?>"><br>
+        <label>Guests: </label><input type="number" name="guests" value="<?=$place['max_guests']?>"><br>
+        <label>Location: </label><?=$place['location']?><br>
+        <label>Type: </label><?=$place['type']?><br>
+        <textarea name="description" rows="4" cols="30" value="<?=$place['description']?>">
+            </textarea><br>
+
+        <?php draw_roomImages($place)?><br>
+        <input id="submit" type="submit" value="Update">
+    </form>
+    <form action="../actions/action_removeRoom.php" method="post">
+        <input type="hidden" name="id" value="<?=$place['id']?>">
+        <button type="submit" class="buttonDelete"> <i class=" material-icons" type="submit">delete</i></button>
+    </form>
+</div>
+<?php
+}?>
+
+
+
+<?php function draw_roomOwner($place)
+{
+    ?>
+<div class="roomOwner">
     <div class="roomInfo">
         <h2><?=$place['title']?><br></h2>
 
-        <form action="../actions/action_rent.php" method="get">
-            <label>Id: </label><?=$place['id']?><br>
-            <label>Title: </label><?=$place['title']?><br>
-            <label>Price: </label><?=$place['price']?><br>
-            <label>Location: </label><?=$place['location']?><br>
-            <label>Type: </label><?=$place['type']?><br>
-            <label>Owner: </label><?=$place['owner_username']?><br>
-            <label>datein: </label><input type="date" name="datein" value=<?=$datein?> /><br>
-            <label>dateout: </label><input type="date" name="dateout" value=<?=$dateout?> /><br>
-            <label>guests: </label><input type="number" name="guests" value=<?=$guests?> /><br>
-            <input type="hidden" name="id" value=<?=$place['id']?> />
-
-
-
-            <input type="hidden" name="price" value=<?=$place['price']?> />
-            <?php draw_roomImages($place)?><br>
-            <input type="submit" value="Send data">
-        </form>
+        <label>Id: </label><?=$place['id']?><br>
+        <label>Title: </label><?=$place['title']?><br>
+        <label>Price: </label><?=$place['price']?><br>
+        <label>Location: </label><?=$place['location']?><br>
+        <label>Type: </label><?=$place['type']?><br>
+        <?php draw_roomImages($place)?><br>
     </div>
-    <?php
+    <i class="material-icons" onclick="window.location.href ='../pages/editRoom.php?id=<?=$place['id']?>'">&#xe8b8;</i>
+</div>
+
+<?php
+}?> <?php function draw_roomPage($place, $datein, $dateout, $price, $guests)
+{
+    ?>
+<div class="roomInfo">
+    <h2><?=$place['title']?><br></h2>
+
+    <form action="../actions/action_rent.php" method="get">
+        <label>Id: </label><?=$place['id']?><br>
+        <label>Title: </label><?=$place['title']?><br>
+        <label>Price: </label><?=$place['price']?><br>
+        <label>Location: </label><?=$place['location']?><br>
+        <label>Type: </label><?=$place['type']?><br>
+        <label>Owner: </label><?=$place['owner_username']?><br>
+        <label>datein: </label><input type="date" name="datein" value=<?=$datein?> /><br>
+        <label>dateout: </label><input type="date" name="dateout" value=<?=$dateout?> /><br>
+        <label>guests: </label><input type="number" name="guests" value=<?=$guests?> /><br>
+        <input type="hidden" name="id" value=<?=$place['id']?> />
+
+
+
+        <input type="hidden" name="price" value=<?=$place['price']?> />
+        <?php draw_roomImages($place)?><br>
+        <input type="submit" value="Send data">
+    </form>
+</div>
+<?php
 }?>
 
-    <?php
+<?php
 
 function draw_roomImages($place)
 {

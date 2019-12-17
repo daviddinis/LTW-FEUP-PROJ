@@ -5,7 +5,7 @@
 	--bg-color: #fffbf0;
 }
 
-.topnav > hr {
+.topnav>hr {
 	border: 0.5em solid var(--hr-bar);
 }
 
@@ -23,15 +23,17 @@ h1 {
 	padding-bottom: 0.1em;
 }
 
-.topnav > p {
+.topnav>p {
 	margin: 0em;
 	padding-left: 1em;
 }
+
 .topnav hr {
 	-webkit-box-shadow: 0px 2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px 2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px 2px 5px 2px rgba(161, 161, 161, 0.51);
 }
+
 .topnav {
 	z-index: 5;
 	position: fixed;
@@ -76,7 +78,7 @@ h1 {
 	padding: 3em;
 }
 
-.descrip > p {
+.descrip>p {
 	margin: 0em;
 }
 
@@ -95,12 +97,12 @@ h1 {
 	grid-template-columns: 50% 50%;
 }
 
-#searchInput > form > label {
+#searchInput>form>label {
 	grid-column-start: 1;
 	grid-column-end: 1;
 }
 
-.searchbox > h2 {
+.searchbox>h2 {
 	margin: 1em;
 }
 
@@ -192,7 +194,7 @@ body {
 	height: 3em;
 }
 
-p > a {
+p>a {
 	cursor: pointer;
 }
 
@@ -269,7 +271,7 @@ a:hover {
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 }
 
-.material-icons{
+.material-icons {
 	cursor: pointer;
 }
 
@@ -283,8 +285,6 @@ a:hover {
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
-}
-#imageWrapper img {
 }
 
 .profile i {
@@ -300,9 +300,11 @@ a:hover {
 .userInfo {
 	display: block;
 }
+
 .inline {
 	display: inline-block;
 }
+
 h2.inline:nth-child(6) {
 	text-decoration: underline;
 }
@@ -320,6 +322,7 @@ h2.inline:nth-child(6):hover {
 #placesList {
 	display: none;
 }
+
 .reservation {
 	display: flex;
 	background-color: var(--bg-color);
@@ -330,6 +333,7 @@ h2.inline:nth-child(6):hover {
 	padding: 0.2em;
 	margin: 0.5em;
 }
+
 .reservation:hover {
 	cursor: pointer;
 }
@@ -346,17 +350,17 @@ h2.inline:nth-child(6):hover {
 	margin-bottom: 0em;
 }
 
-.reservationInfo > label:nth-child(1) {
+.reservationInfo>label:nth-child(1) {
 	font-weight: bold;
 	font-size: 1.2em;
 }
 
-.reservationInfo > br:nth-child(2) {
+.reservationInfo>br:nth-child(2) {
 	display: block;
 	margin: 0.3em;
 }
 
-.reservationInfo > label {
+.reservationInfo>label {
 	font-weight: bold;
 }
 
@@ -364,12 +368,14 @@ h2.inline:nth-child(6):hover {
 .roomForm {
 	margin: auto;
 	min-width: 30rem;
-	width: 30rem;
+	width: 50%;
 	padding: 1em;
 	background-color: var(--bg-color);
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	display: flex;
+	justify-content: space-between;
 }
 
 .roomForm h2 {
@@ -385,26 +391,26 @@ h2.inline:nth-child(6):hover {
 	margin: 1em;
 }
 
-#roomForm > input:nth-child(2) {
+#roomForm>input:nth-child(2) {
 	margin-left: 8.59em;
 	width: 18em;
 }
 
-#roomForm > input:nth-child(5) {
+#roomForm>input:nth-child(5) {
 	margin-left: 6em;
 	width: 18em;
 }
 
-#roomForm > input:nth-child(8) {
+#roomForm>input:nth-child(8) {
 	margin-left: 2.28em;
 	width: 18em;
 }
 
-#roomForm > input:nth-child(11) {
+#roomForm>input:nth-child(11) {
 	width: 18em;
 }
 
-#roomForm > textarea:nth-child(20) {
+#roomForm>textarea:nth-child(20) {
 	margin-top: 0em;
 	min-width: 35em;
 	width: 35em;
@@ -496,12 +502,12 @@ h2.inline:nth-child(6):hover {
 	padding: 0.1em 0.1em;
 }
 
-.searchbar > h2 {
+.searchbar>h2 {
 	padding: 0;
 	margin: 0;
 }
 
-#searchbar > input {
+#searchbar>input {
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -516,6 +522,7 @@ h2.inline:nth-child(6):hover {
 	width: 100%;
 	opacity: 1;
 }
+
 .searchResults {
 	position: relative;
 	left: 13em;
@@ -544,9 +551,9 @@ h2.inline:nth-child(6):hover {
 
 	-webkit-transition: 0.2s;
 	transition: opacity 0.2s;
-} 
+}
 
- .slider:hover {
+.slider:hover {
 	opacity: 1;
 }
 
@@ -557,4 +564,27 @@ input[type=range]::-moz-range-thumb {
 	border-radius: 0px;
 	background: #ff8e00;
 	cursor: pointer;
+}
+
+
+
+.roomOwner {
+	margin: auto;
+	width: 50%;
+	min-width: 30em;
+	padding: 1em;
+	background-color: var(--bg-color);
+	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.buttonDelete {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
 }
