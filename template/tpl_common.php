@@ -62,9 +62,6 @@ function draw_header()
                     <label>Max price <span id="valueMax">100</span></label>
                     <input type="range" min="1" max="100" value="100" class="slider" name="maxPrice" id="maxPrice"
                         oninput="updateSlider('maxPrice','valueMax')">
-
-                    : Porto
-                    Type: Apartment
                     <input id="searchbuttom" type="submit" value="Search">
                 </form>
             </div>
