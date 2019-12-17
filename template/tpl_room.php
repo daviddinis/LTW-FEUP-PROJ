@@ -85,6 +85,7 @@
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
+        <label>Description: </label><?=$place['description']?><br>
         <?php draw_roomImages($place)?><br>
     </div>
     <i class="material-icons" onclick="window.location.href ='../pages/editRoom.php?id=<?=$place['id']?>'">&#xe8b8;</i>
@@ -94,7 +95,7 @@
 }?> <?php function draw_roomPage($place, $datein, $dateout, $price, $guests)
 {
     ?>
-<div class="roomPage">
+<div class="roomForm">
     <h2><?=$place['title']?><br></h2>
 
     <form action="../actions/action_rent.php" method="get">
@@ -103,10 +104,14 @@
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
+        <label>Description: </label><?=$place['description']?><br>
         <label>Owner: </label><?=$place['owner_username']?><br>
-        <label>datein: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date" name="datein" value=<?=$datein?> /><br>
-        <label>dateout: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date" name="dateout" value=<?=$dateout?> /><br>
-        <label>guests: </label><input type="number" min="1" max="<?=$place['max_guests']?>" name="guests" value=<?=$guests?> /><br>
+        <label>datein: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
+            name="datein" value=<?=$datein?> /><br>
+        <label>dateout: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
+            name="dateout" value=<?=$dateout?> /><br>
+        <label>guests: </label><input type="number" min="1" max="<?=$place['max_guests']?>" name="guests"
+            value=<?=$guests?> /><br>
         <input type="hidden" name="id" value=<?=$place['id']?> />
         <input type="hidden" name="price" value=<?=$place['price']?> />
         <?php draw_roomImages($place)?><br>
