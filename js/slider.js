@@ -1,7 +1,17 @@
-function updateSlider(sliderID, value) {
-    let slider = document.getElementById(sliderID);
-    let output = document.getElementById(value);
-    output.innerHTML = slider.value;
+function updateSlider() {
+    // let minSlider = document.getElementById("minPrice");
+    // let maxSlider = document.getElementById("maxPrice");
+
+    // let minOutput = document.getElementById("valueMin");
+    // let maxOutput = document.getElementById("valueMax");
+
+    // if(minSlider.value > maxSlider.value ){
+    //     minSlider.value = maxSlider.value -1;
+    // }
+    // console.log(minSlider.value)
+    // console.log(maxSlider.value)
+    // maxOutput.innerHTML = maxSlider.value;
+    // minOutput.innerHTML = minSlider.value;
 }
 
 function checkDates() {

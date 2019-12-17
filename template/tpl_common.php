@@ -27,8 +27,8 @@ function draw_header()
                 <?php if(!isset($_SESSION['username'])){ ?>
                 <button class="open-button" onclick="openLoginForm()">Login</button>
                 <?php } else {?>
-                <div class="profilePreview" onclick="window.location.href ='../pages/user.php'" onmouseover="openDropDown()"
-                    onmouseout="closeDropDown()">
+                <div class="profilePreview" onclick="window.location.href ='../pages/user.php'"
+                    onmouseover="openDropDown()" onmouseout="closeDropDown()">
                     <h3><?php echo $_SESSION['username']?></h3>
                     <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" />
                     <div class="dropDown">
@@ -47,7 +47,7 @@ function draw_header()
         <div class="mainPage">
             <div class="searchbox">
                 <h2>Search</h2>
-                <form method="post" action="../pages/search.php" id=searchInput>
+                <form method="get" action="../pages/search.php" id=searchInput>
                     <label>Location</label>
                     <input type="text" name="location" placeholder="Where do you want to stay?" required>
                     <label>Check-in</label>
@@ -57,10 +57,12 @@ function draw_header()
                     <label>Number of Guests</label>
                     <input type="number" name="guests" value="1" placeholder="1">
                     <label>Min price <span id="valueMin">1</span></label>
-                    <input type="range" min="1" max="100" value="1" class="slider" name="minPrice" id="minPrice" oninput="updateSlider('minPrice','valueMin')">
+                    <input type="range" min="1" max="100" value="1" class="slider" name="minPrice" id="minPrice"
+                        oninput="updateSlider('minPrice','valueMin')">
                     <label>Max price <span id="valueMax">100</span></label>
-                    <input type="range" min="1" max="100" value="100" class="slider" name="maxPrice" id="maxPrice" oninput="updateSlider('maxPrice','valueMax')">
-                    
+                    <input type="range" min="1" max="100" value="100" class="slider" name="maxPrice" id="maxPrice"
+                        oninput="updateSlider('maxPrice','valueMax')">
+
 
                     <input id="searchbuttom" type="submit" value="Search">
                 </form>

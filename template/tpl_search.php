@@ -12,21 +12,21 @@ function draw_search_results($places, $guests, $datein, $dateout)
 function draw_placeItem($place, $guests, $datein, $dateout)
 {
     ?>
-    <!-- ADD SECURITY -->
-    <div class="roomDisplay" onclick="window.location.href='../pages/roomPage.php?id=<?= $place['id'] ?>&datein=<?=$datein?>&dateout=<?=$dateout?>&guests=<?=$guests?>'">
-        <h3><?= $place['title'] ?></h3>
-        <label>Price: </label><?= $place['price'] ?><br>
-        <label>Location: </label><?= $place['location'] ?><br>
-        <label>Type: </label><?= $place['type'] ?><br>
+<div class="roomDisplay"
+    onclick="window.location.href='../pages/roomPage.php?id=<?= $place['id'] ?>&datein=<?=$datein?>&dateout=<?=$dateout?>&guests=<?=$guests?>'">
+    <h3><?= $place['title'] ?></h3>
+    <label>Price: </label><?= $place['price'] ?><br>
+    <label>Location: </label><?= $place['location'] ?><br>
+    <label>Type: </label><?= $place['type'] ?><br>
 
-        <?php $dir = "../imageDatabase/roomPics/" . $place['owner_username'] . "/" . $place['id'] . "/";
+    <?php $dir = "../imageDatabase/roomPics/" . $place['owner_username'] . "/" . $place['id'] . "/";
 
             $files = scandir($dir);
             
                 echo "<img src=\"" . $dir . $files[2] . "\" alt=\"Room Picture\" width=\"90px\" height=\"90px\">";
             
             ?>
-    </div>
+</div>
 
 <?php
 }
@@ -35,8 +35,8 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
 {
     ?>
 <div class="searchbar">
-    <form method="post" action="../pages/search.php" id=searchbar>
-    <label>Location</label>
+    <form method="get" action="../pages/search.php" id=searchbar>
+        <label>Location</label>
         <input type="text" name="location" placeholder="Where do you want to stay?" value="<?=$location?>" required>
         <label>Check-in</label>
         <input type="date" name="checkin" placeholder="Check-in" value="<?=$datein?>">
@@ -44,12 +44,13 @@ function draw_searchbar($location, $datein, $dateout, $guests, $minPrice, $maxPr
         <input type="date" name="checkout" onchange="checkDates()" placeholder="Check-out" value="<?=$dateout?>">
         <label>Guests</label>
         <input type="number" name="guests" placeholder="1" min="1" value="<?=$guests?>">
-        <div class="slidecontainer" >
+        <div class="slidecontainer">
             <label>Min price</label>
-            <input type="range" min="1" max="100" value="<?=$minPrice?>" name="minPrice" class="slider" id="minPrice" oninput="updateSlider('minPrice','valueMin')">
+            <input type="range" min="1" max="101" value="<?=$minPrice?>" name="minPrice" class="slider" id="minPrice" onchange="updateSlider()">
             <p>Value: <span id="valueMin"><?=$minPrice?></span></p>
             <label>Max price</label>
-            <input  type="range" min="1" max="100" value="<?=$maxPrice?>" name="maxPrice" class="slider" id="maxPrice" oninput="updateSlider('maxPrice','valueMax')">
+            <input  type="range" min="1" max="101" value="<?=$maxPrice?>" name="maxPrice" class="slider" id="maxPrice" onchange="updateSlider()">
+            
             <p>Value: <span id="valueMax"><?=$maxPrice?></span></p>
         </div>
         <input id="searchbuttombar" type="submit" value="Search">
