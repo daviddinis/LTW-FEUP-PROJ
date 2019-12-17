@@ -53,7 +53,7 @@ function draw_header()
                     <label>Check-in</label>
                     <input type="date" name="checkin" placeholder="Check-in">
                     <label>Check-out</label>
-                    <input type="date" name="checkout" placeholder="Check-out">
+                    <input type="date" name="checkout" onchange="checkDates()" placeholder="Check-out">
                     <label>Number of Guests</label>
                     <input type="number" name="guests" value="1" placeholder="1">
                     <label>Min price <span id="valueMin">1</span></label>
