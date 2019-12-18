@@ -33,12 +33,19 @@ function checkValidInfo(placeId) {
 		Object.prototype.toString.call(dateIn) === "[object Date]"
 	) {
 		// it is a date
-		if (!isNaN(dateOut.getTime())) {
-			if (dateIn < dateOut) {
-				var newDateIn = dateIn.getTime() / 1000;
-				var newDateOut = dateOut.getTime() / 1000;
+		if (!isNaN(dateOut.getTime()) && !isNaN(dateIn.getTime())) {
+			var today = Date.now();
+			var newDateIn = dateIn.getTime() / 1000;
+			var newDateOut = dateOut.getTime() / 1000;
 
-				// console.log(newDateOut);
+			console.log(today);
+			console.log(newDateIn);
+
+			if (dateIn < today || dateOut < today) {
+				alert("Chosen dates must be after the current date!");
+				document.getElementById("submit").disabled = true;
+			}
+			if (dateIn < dateOut) {
 
 				var xmlhttp = new XMLHttpRequest();
 				xmlhttp.onreadystatechange = function() {
@@ -46,6 +53,7 @@ function checkValidInfo(placeId) {
 						document.getElementById("submit").disabled = false;
 						console.log("Validated Submit!");
 					} else if (this.responseText.includes("0")) {
+						alert("Chosen dates are not available for this place");
 						console.log("Submit Disabled");
 					}
 				};
