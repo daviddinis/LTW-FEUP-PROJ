@@ -20,6 +20,7 @@ h1 {
 	font-size: 3em;
 	margin: 0;
 	padding: 0.2em;
+	padding-left: .3em;
 	padding-bottom: 0.1em;
 }
 
@@ -53,12 +54,17 @@ h1 {
 	position: relative;
 	background-color: var(--bg-color);
 	width: 25em;
-	height: 15em;
+	height: 13em;
 	padding: 1em;
 	background-color: var(--bg-color);
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+	margin: 1em 3em;
+}
+
+.descrip p {
+	text-align: justify;
 }
 
 #signup,
@@ -66,30 +72,30 @@ h1 {
 	color: black;
 }
 
-.mainPage * {
-	margin: 1em 3em;
-}
-
 .mainPage {
 	display: flex;
 	margin: auto;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 	padding: 3em;
-}
-
-.descrip > p {
-	margin: 0em;
 }
 
 /* SEARCHBOX */
 .searchbox {
-	width: 27em;
+	margin: 1em 3em;
+	width: 26em;
 	height: 24em;
+	padding: .5em;
 	background-color: var(--bg-color);
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+}
+
+.searchbox form * {
+	margin: 0.2em;
+	padding: 0.3em;
 }
 
 #searchInput {
@@ -110,10 +116,6 @@ input {
 	font: 400 13.3333px Arial;
 }
 
-.searchbox form * {
-	margin: 0.1em;
-	padding: 0.4em;
-}
 
 #searchbuttom {
 	background-color: var(--main-color);

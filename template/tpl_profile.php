@@ -24,7 +24,12 @@
     <?php function draw_place($place)
 {?>
     <div class="reservation" onclick="window.location.href='../pages/userRoom.php?id=<?=$place['id']?>'">
-        <img src="../1334321.png" alt="Room photo" width="80" height="80">
+        
+    <?php $dir = "../imageDatabase/roomPics/" . $place['owner_username'] . "/" . $place['id'] . "/";
+
+        $files = scandir($dir);
+        echo "<img src=\"" . $dir . $files[2] . "\" alt=\"Room Picture\" width=\"90px\" height=\"90px\">";
+    ?>
         <div class="reservationInfo">
             <label>Title </label><?=$place['title']?><br>
             <label>Location </label><?=$place['location']?><br>
@@ -58,7 +63,10 @@
     ?>
     <!-- ADD SECURITY -->
     <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=urlencode($place[0]['id'])?>'">
-        <img src="../1334321.png" alt="Room photo" width="80" height="80">
+    <?php $dir = "../imageDatabase/roomPics/" . $place[0]['owner_username'] . "/" . $place[0]['id'] . "/";
+        $files = scandir($dir);
+        echo "<img src=\"" . $dir . $files[2] . "\" alt=\"Room Picture\" width=\"90px\" height=\"90px\">";
+    ?>
         <div class="reservationInfo">
             <label>Title </label><?= $place[0]['title'] ?><br>
             <label>Location </label><?= $place[0]['location'] ?><br>
