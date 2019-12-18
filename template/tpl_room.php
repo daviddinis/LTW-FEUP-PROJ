@@ -31,7 +31,8 @@
         </textarea>
         <input type="file" name="files[]" multiple>
         <label></label>
-        <input id="submit" type="submit" value="Publish">
+        <button type="submit" class="buttonSent"> <i class=" material-icons" type="submit">send</i></button>
+
     </form>
 </div>
 <?php
@@ -61,11 +62,11 @@
             </textarea><br>
         <?php draw_roomImages($place)?><br>
         <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
-        <input id="submit" type="submit" value="Update">
+        <button type="submit" class="buttonSent"> <i class=" material-icons" type="submit">send</i></button>
     </form>
     <form action="../actions/action_removeRoom.php" method="post">
-    <input type="hidden" name="id" value="<?=$place['id']?>">
-    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
+        <input type="hidden" name="id" value="<?=$place['id']?>">
+        <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
         <button type="submit" class="buttonDelete"> <i class=" material-icons" type="submit">delete</i></button>
     </form>
 </div>
@@ -100,13 +101,12 @@
     <h2><?=$place['title']?><br></h2>
 
     <form action="../actions/action_rent.php" method="get">
-        <label>Id: </label><?=$place['id']?><br>
-        <label>Title: </label><?=$place['title']?><br>
+        <p><?=$place['description']?></p><br>
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
-        <label>Description: </label><?=$place['description']?><br>
-        <label>Owner: </label><?=$place['owner_username']?><br>
+        <label>Owner: </label><?=$place['owner_username']?><br><br>
+
         <label>datein: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
             name="datein" value=<?=$datein?> /><br>
         <label>dateout: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
@@ -116,7 +116,8 @@
         <input type="hidden" name="id" value=<?=$place['id']?> />
         <input type="hidden" name="price" value=<?=$place['price']?> />
         <?php draw_roomImages($place)?><br>
-        <input type="submit" onclick="checkValidInfo()" id="submit" disabled="true" value="Send data">
+        <button type="submit" onclick="checkValidInfo()" class="buttonSentRoom"> <i class=" material-icons"
+                type="submit">send</i></button>
     </form>
 </div>
 <?php

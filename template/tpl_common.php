@@ -32,7 +32,10 @@ function draw_header()
                     <h3><?php echo $_SESSION['username']?></h3>
                     <img src=<?php echo getUserPhoto($_SESSION['username'])?> alt="Profile picture" />
                     <div class="dropDown">
-                        <a href='../actions/action_logout.php'>Logout</a>
+                        <div class="dropDown-content">
+                            <a href="../pages/createRoom.php">New Room</a><br>
+                            <a href='../actions/action_logout.php'>Logout</a>
+                        </div>
                     </div>
                 </div>
                 <?php } ?>
@@ -88,9 +91,7 @@ function draw_header()
     <!-- DRAW FOOTER -->
     <div class="footer">
         <hr>
-        <div class="footerinfo">
-            <a href="../pages/createRoom.php">Create a Room</a>
-        </div>
+
     </div>
 </body>
 
