@@ -57,6 +57,15 @@ function getOwnerBookings($owner_id)
     return $stmt->fetchAll();
 }
 
+function getRoomBookings($RoomID)
+{
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('SELECT * FROM reservation WHERE placeID = ?');
+    $stmt->execute(array($RoomID));
+    return $stmt->fetchAll();
+}
+
+
 function updateRoom($room)
 {
     $db = Database::instance()->db();

@@ -606,6 +606,9 @@ input[type=range]::-moz-range-thumb {
 	justify-content: space-between;
 
 }
+.roomOwner > .roomInfo{
+	flex: 90%;
+}
 
 .buttonDelete {
 	margin: 0;
