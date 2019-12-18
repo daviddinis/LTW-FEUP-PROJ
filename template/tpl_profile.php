@@ -104,6 +104,7 @@
                 <input type="text" name="name" value=<?php echo $user['name'] ?> required>
                 <h2>Username</h2>
                 <label></label><?php echo $user['username'] ?> </label><br>
+                <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
                 <input id="editbutton" type="submit" value="Save" href="user.php">
         </form>
     </div>
