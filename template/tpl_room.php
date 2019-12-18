@@ -74,23 +74,25 @@
 }?>
 
 
-
 <?php function draw_roomOwner($place)
 {
     ?>
 <div class="roomOwner">
     <div class="roomInfo">
         <h2><?=$place['title']?><br></h2>
-
-        <label>Id: </label><?=$place['id']?><br>
-        <label>Title: </label><?=$place['title']?><br>
+        <?=$place['description']?><br><br>
         <label>Price: </label><?=$place['price']?><br>
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
-        <label>Description: </label><?=$place['description']?><br>
+
         <?php draw_roomImages($place)?><br>
     </div>
-    <i class="material-icons" onclick="window.location.href ='../pages/editRoom.php?id=<?=$place['id']?>'">&#xe8b8;</i>
+    <div>
+        <i class="material-icons"
+            onclick="window.location.href ='../pages/editRoom.php?id=<?=$place['id']?>'">&#xe8b8;</i>
+        <i class="material-icons"
+            onclick="window.location.href ='../pages/placeReservations.php?id=<?=$place['id']?>'">event</i>
+    </div>
 </div>
 
 <?php

@@ -56,8 +56,8 @@
 {
     $place = getPlace($booking['placeID']);
     ?>
-        <!-- ADD SECURITY -->
-    <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=urlencode($place[0]['id'])?>&datein=<?=urlencode($booking['checkIn'])?>&dateout=<?=urlencode($booking['checkOut'])?>&guests=<?=urlencode($booking['guests'])?>'">
+    <!-- ADD SECURITY -->
+    <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=urlencode($place[0]['id'])?>'">
         <img src="../1334321.png" alt="Room photo" width="80" height="80">
         <div class="reservationInfo">
             <label>Title </label><?= $place[0]['title'] ?><br>
@@ -74,10 +74,12 @@
 {?>
     <div class="profileList" id="bookingsList">
         <div class="reservationsInfo">
-            <?php if (count($bookings) == 0) {?>
-            <label onclick="window.location.href='../pages/login.php'">You have reservations. Plan your trip
-                now!</label>
-            <?php }
+            <?php if (count($bookings) == 0) {
+                    if(strcmp($_SERVER['PHP_SELF'],"pages/placeReservations.php") == 0 ){?>
+            <label onclick="window.location.href='../pages/login.php'">You have reservations. Plan your trip now!</label>
+                    <?php } else{ ?>
+            <label >Oops! This room has no reservations.</label><?php }
+            }
     foreach ($bookings as $booking) {
         draw_booking($booking);
     }
