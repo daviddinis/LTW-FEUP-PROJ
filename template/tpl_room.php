@@ -38,15 +38,6 @@
 <?php
 }?>
 
-
-<?php function cenas($id)
-{
-    ?>
-<h2><?=$id?><br></h2>
-
-<?php
-}?>
-
 <?php function draw_editRoom($place)
 {
     ?>
@@ -58,7 +49,8 @@
         <label>Guests: </label><input type="number" name="guests" value="<?=$place['max_guests']?>"><br>
         <label>Location: </label><?=$place['location']?><br>
         <label>Type: </label><?=$place['type']?><br>
-        <textarea name="description" rows="4" cols="30" value="<?=$place['description']?>">
+        <textarea name="description" rows="5" cols="60">
+            <?=$place['description']?>
             </textarea><br>
         <?php draw_roomImages($place)?><br>
         <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">

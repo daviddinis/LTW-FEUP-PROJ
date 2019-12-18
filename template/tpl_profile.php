@@ -8,9 +8,6 @@
             <label><?=getUser($username)['name']?></label>
             <h2>Username</h2>
             <label><?=$username?></label><br>
-            <!-- <h2>Contacts</h2>
-        <label>Email: </label>antonio89@email.com<br>
-        <label>Phone: </label>999-999-999<br> -->
             <h2 class="inline" onclick="switchToBookingsView()">My Bookings </h2>&nbsp;&nbsp;<h2 class="inline"
                 onclick="switchToPlacesView()">My Places</h2>
             <?php draw_places($places)?>
@@ -23,18 +20,18 @@
 
     <?php function draw_place($place)
 {?>
-    <div class="reservation" onclick="window.location.href='../pages/userRoom.php?id=<?=$place['id']?>'">
-        
+    <div class="reservation" >
     <?php $dir = "../imageDatabase/roomPics/" . $place['owner_username'] . "/" . $place['id'] . "/";
-
+        
         $files = scandir($dir);
-        echo "<img src=\"" . $dir . $files[2] . "\" alt=\"Room Picture\" width=\"90px\" height=\"90px\">";
+        echo "<img src=\"" . $dir . $files[2] . "\" alt=\"Room Picture\" width=\"115ppx\" height=\"115ppx\">";
     ?>
         <div class="reservationInfo">
             <label>Title </label><?=$place['title']?><br>
             <label>Location </label><?=$place['location']?><br>
             <label>Price </label><?=$place['price']?><br>
         </div>
+        <a class="material-icons" onclick="window.location.href='../pages/userRoom.php?id=<?=$place['id']?>'">&#xe8b8;</a>
     </div>
     <?php
 }?>
@@ -65,7 +62,7 @@
     <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=urlencode($place[0]['id'])?>'">
     <?php $dir = "../imageDatabase/roomPics/" . $place[0]['owner_username'] . "/" . $place[0]['id'] . "/";
         $files = scandir($dir);
-        echo "<img src=\"" . $dir . $files[2] . "\" alt=\"Room Picture\" width=\"90px\" height=\"90px\">";
+        echo "<img src=\"" . $dir . $files[2] . "\" alt=\"Room Picture\" width=\"115px\" height=\"115px\">";
     ?>
         <div class="reservationInfo">
             <label>Title </label><?= $place[0]['title'] ?><br>

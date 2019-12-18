@@ -5,7 +5,7 @@ include_once '../database/db_room.php';
 include_once('../actions/validation.php');
 
 
-if ($_SESSION['csrf'] !== $_POST['csrf']) {
+if ($_SESSION['csrf'] !== $_GET['csrf']) {
     $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Invalid CSRF!');
     die(header('Location: ../pages/user.php'));
 }

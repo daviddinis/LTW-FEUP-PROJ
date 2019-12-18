@@ -12,7 +12,6 @@ function draw_search_results($places, $guests, $datein, $dateout)
 function draw_placeItem($place, $guests, $datein, $dateout)
 {
     ?>
-    <!-- ADD SECURITY -->
 <div class="roomDisplay"
     onclick="window.location.href='../pages/roomPage.php?id=<?=$place['id']?>&datein=<?=$datein?>&dateout=<?=$dateout?>&guests=<?=$guests?>'">
     <h3><?= $place['title'] ?></h3>

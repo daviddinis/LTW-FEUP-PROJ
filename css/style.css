@@ -329,14 +329,17 @@ h2.inline:nth-child(6):hover {
 	margin: 0.5em;
 }
 
-.reservation:hover {
-	cursor: pointer;
-}
-
 .reservation img {
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
+}
+.reservation > a {
+	position: relative;
+	margin: .1em .1em auto auto;
+	font-size: xx-large;
+	color: #ff8e00;
+	height: 1em;
 }
 
 .reservationInfo {
@@ -551,17 +554,33 @@ h2.inline:nth-child(6):hover {
 	padding: 1em;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 170vh;
+	max-width: 175vh;
+	align-items: center;
 }
 
 .roomDisplay {
-	width: 40vh;
+	width: 23.5em;
 	background-color: var(--bg-color);
 	-webkit-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	-moz-box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	box-shadow: 0px -2px 5px 2px rgba(161, 161, 161, 0.51);
 	padding: 0.2em;
 	margin: 0.5em;
+	height: 11em;
+}
+
+.roomDisplay * {
+	margin: 0.2em;
+}
+.roomDisplay img {
+	position: relative;
+	left: 17em;
+	bottom: 4.5em;
+}
+
+.roomDisplay h3 {
+	margin-bottom: .5em;
+	height: 2.5em;
 }
 
 .slidecontainer {
