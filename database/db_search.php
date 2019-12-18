@@ -50,6 +50,8 @@ function available_place($placeId, $datein, $dateout)
     return $ret;
 }
 
-// function convertToDate($unix) {
-//   return new DateTime($unix);
-// }
+
+
+function getSearchResults($location, $datein, $dateout, $guests, $min_price, $max_price) {
+  return search_database($location, $datein, $dateout, $guests, $min_price, $max_price);
+}

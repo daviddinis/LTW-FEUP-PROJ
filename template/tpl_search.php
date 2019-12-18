@@ -14,7 +14,7 @@ function draw_placeItem($place, $guests, $datein, $dateout)
     ?>
     <!-- ADD SECURITY -->
 <div class="roomDisplay"
-    onclick="window.location.href='../pages/roomPage.php?id=<?= $place['id'] ?>&datein=<?=$datein?>&dateout=<?=$dateout?>&guests=<?=$guests?>'">
+    onclick="window.location.href='../pages/roomPage.php?id=<?=$place['id']?>&datein=<?=$datein?>&dateout=<?=$dateout?>&guests=<?=$guests?>'">
     <h3><?= $place['title'] ?></h3>
     <label>Price: </label><?= $place['price'] ?><br>
     <label>Location: </label><?= $place['location'] ?><br>

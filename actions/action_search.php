@@ -10,13 +10,8 @@ include_once('../actions/validation.php');
 if (!isset($_SESSION['username']))
   die(header('Location: ../pages/login.php'));
 
+$location = test_input($_GET['location']);
+$datein = $_GET['datein'];
+$dateout = $_GET['dateout'];
+$guests = $_GET['guests'];
 
-$location = test_input($_POST['location']);
-$datein = $_POST['datein'];
-$dateout = $_POST['dateout'];
-$guests = $_POST['guests'];
-
-
-function getSearchResults($location, $datein, $dateout, $guests, $min_price, $max_price) {
-  return search_database($location, $datein, $dateout, $guests, $min_price, $max_price);
-}
