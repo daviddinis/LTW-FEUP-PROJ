@@ -10,7 +10,6 @@ function draw_header()
 
 <head>
     <title>Botino</title>
-    <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -54,9 +53,9 @@ function draw_header()
                     <label>Location</label>
                     <input type="text" name="location" placeholder="Where do you want to stay?" required>
                     <label>Check-in</label>
-                    <input type="date" name="checkin" placeholder="Check-in">
+                    <input type="date" name="checkin">
                     <label>Check-out</label>
-                    <input type="date" name="checkout" onchange="checkDates()" placeholder="Check-out">
+                    <input type="date" name="checkout" onchange="checkDates()">
                     <label>Number of Guests</label>
                     <input type="number" name="guests" value="1" placeholder="1">
                     <label>Min price <span id="valueMin">1</span></label>

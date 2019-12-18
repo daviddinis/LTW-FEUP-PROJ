@@ -12,7 +12,7 @@
         <input type="text" name="username" placeholder="username" required>
         <input type="password" name="password" placeholder="password" required>
         <button type="submit" class="btn" id="btn-login">Login</button>
-        <p>Don't have an account? <a onclick="closeForm(); openSignUpForm();"">Signup!</a></p>
+        <p>Don't have an account? <a onclick="closeForm(); openSignUpForm();">Signup!</a></p>
     </form>
 
 </div>

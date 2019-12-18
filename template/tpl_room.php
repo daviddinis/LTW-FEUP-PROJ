@@ -107,11 +107,11 @@
         <label>Type: </label><?=$place['type']?><br>
         <label>Owner: </label><?=$place['owner_username']?><br><br>
 
-        <label>datein: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
+        <label>Check-in: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
             name="datein" value=<?=$datein?> /><br>
-        <label>dateout: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
+        <label>Check-out: </label><input required="true" onchange="checkValidInfo(<?=$place['id']?>)" type="date"
             name="dateout" value=<?=$dateout?> /><br>
-        <label>guests: </label><input type="number" min="1" max="<?=$place['max_guests']?>" name="guests"
+        <label>Nº of guests: </label><input type="number" min="1" max="<?=$place['max_guests']?>" name="guests"
             value=<?=$guests?> /><br>
         <input type="hidden" name="id" value=<?=$place['id']?> />
         <input type="hidden" name="price" value=<?=$place['price']?> />
