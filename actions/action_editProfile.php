@@ -4,8 +4,12 @@
     include_once('../database/db_user.php');
     include_once('../actions/validation.php');
 
+    if ($_SESSION['csrf'] !== $_POST['csrf']) {
+        $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Invalid CSRF!');
+        die(header('Location: ../pages/user.php'));
+    }
+
     $name = test_input($_POST['name']);
-    
     $user = getUser($_SESSION['username']);
     $updatedUser = new ArrayObject();
     $updatedUser['name'] = $name;

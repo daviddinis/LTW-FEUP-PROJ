@@ -5,7 +5,7 @@ include_once '../template/tpl_common.php';
 include_once '../template/tpl_auth.php';
 include_once '../template/tpl_room.php';
 include_once '../template/tpl_search.php';
-include_once '../actions/action_search.php';
+include_once('../database/db_search.php');
 
 $location = $_GET['location'];
 $datein = $_GET['checkin'];

@@ -64,7 +64,7 @@ function getUser($username)
     $stmt = $db->prepare('SELECT username FROM user WHERE username = ?');
     $stmt->execute(array($testeuser));
     $user = $stmt->fetch();
-    if (count($user['username']) == 0) {
+    if ($user == NULL) {
         return true;
     } else {return false;}
 }

@@ -59,7 +59,7 @@
     $place = getPlace($booking['placeID']);
     ?>
         <!-- ADD SECURITY -->
-    <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=urlencode($place[0]['id'])?>'">
+    <div class="reservation" onclick="window.location.href='../pages/roomPage.php?id=<?=urlencode($place[0]['id'])?>&datein=<?=urlencode($booking['checkIn'])?>&dateout=<?=urlencode($booking['checkOut'])?>&guests=<?=urlencode($booking['guests'])?>'">
         <img src="../1334321.png" alt="Room photo" width="80" height="80">
         <div class="reservationInfo">
             <label>Title </label><?= $place[0]['title'] ?><br>
@@ -92,7 +92,7 @@
 
 
 
-    <?php function draw_editUser($user)
+    <?php function draw_editUser($userA)
 {?>
     <div class="profile">
         <img src=<?php echo getUserPhoto($_SESSION['username']) ?> alt="Profile picture" width="180px" height="180px">
@@ -101,9 +101,10 @@
             <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
             <div class="userInfo">
                 <h2>Name</h2>
-                <input type="text" name="name" value=<?php echo $user['name'] ?> required>
+                <input type="text" name="name" value=<?php echo $userA['name'] ?> required>
                 <h2>Username</h2>
-                <label></label><?php echo $user['username'] ?> </label><br>
+                <label></label><?php echo $userA['username'] ?> </label><br>
+                <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
                 <input id="editbutton" type="submit" value="Save" href="user.php">
         </form>
     </div>
