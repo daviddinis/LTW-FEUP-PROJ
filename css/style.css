@@ -198,11 +198,7 @@ p>a {
 	cursor: pointer;
 }
 
-a:hover {
-	border: 1px solid;
-}
 
-/* The popup form - hidden by default */
 .auth-popup {
 	display: none;
 	position: absolute;
@@ -468,14 +464,29 @@ h2.inline:nth-child(6):hover {
 	display: none;
 	position: absolute;
 	top: 5.5em;
-	right: 1em;
+	right: 0em;
 	box-sizing: content-box;
-	background-color: cornflowerblue;
-	width: 60%;
-	padding:0.3em 1.2em;
-	margin:0 0.3em 0.3em 0;
-	align-items: center;
+
 	border-radius: 2em;
+}
+
+.dropDown-content * {
+	background-color: rgba(172, 172, 256, 0.5);
+	border-radius: 2em;
+	width: 100%;
+	text-align: center;
+	padding: 0.3em 1.2em;
+	margin: 0 0.3em 0.1em 0;
+}
+
+.dropDown-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dropDown-content *:hover {
+	background-color: rgba(172, 172, 256, 0.70);
 }
 
 .search_results {
@@ -605,4 +616,29 @@ input[type=range]::-moz-range-thumb {
 
 .slidecontainer {
 	margin-top: 2em;
+}
+
+.buttonSent {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	right: -40%;
+}
+
+.buttonSentRoom {
+	margin: 0;
+	padding: 0;
+	background: none;
+	padding-left: 90%;
+	border: none;
+	bottom: 1em;
+	right: 1em;
+}
+
+i {
+	font-size: xx-large;
+	color: #ff8e00;
+
 }
