@@ -28,19 +28,6 @@ function getPlace($id)
     return $stmt->fetchAll();
 }
 
-/**
- * Verifies if a user owns a list.
- */
-//   function checkIsListOwner($username, $list_id) {
-//     $db = Database::instance()->db();
-//     $stmt = $db->prepare('SELECT * FROM list WHERE username = ? AND list_id = ?');
-//     $stmt->execute(array($username, $list_id));
-//     return $stmt->fetch()?true:false; // return true if a line exists
-//   }
-
-/**
- * Returns a certain item from the database.
- */
 function getOwnerPlaces($owner_id)
 {
     $db = Database::instance()->db();
@@ -80,21 +67,3 @@ function removeRoom($roomID)
     $stmt = $db->prepare(' DELETE from place WHERE id = ?');
     $stmt->execute(array($roomID));
 }
-
-/**
- * Deletes a certain item from the database.
- */
-//   function deleteItem($item_id) {
-//     $db = Database::instance()->db();
-//     $stmt = $db->prepare('DELETE FROM item WHERE item_id = ?');
-//     $stmt->execute(array($item_id));
-//   }
-
-/**
- * Toggles the done state of a certain item.
- */
-//   function toggleItem($item_id) {
-//     $db = Database::instance()->db();
-//     $stmt = $db->prepare('UPDATE item SET item_done = 1 - item_done WHERE item_id = ?');
-//     $stmt->execute(array($item_id));
-//   }

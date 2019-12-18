@@ -76,10 +76,12 @@
 {?>
     <div class="profileList" id="bookingsList">
         <div class="reservationsInfo">
-            <?php if (count($bookings) == 0) {?>
-            <label onclick="window.location.href='../pages/login.php'">You have reservations. Plan your trip
-                now!</label>
-            <?php }
+            <?php if (count($bookings) == 0) {
+                    if(strcmp($_SERVER['PHP_SELF'],"pages/placeReservations.php") == 0 ){?>
+            <label onclick="window.location.href='../pages/login.php'">You have reservations. Plan your trip now!</label>
+                    <?php } else{ ?>
+            <label >Oops! This room has no reservations.</label><?php }
+            }
     foreach ($bookings as $booking) {
         draw_booking($booking);
     }

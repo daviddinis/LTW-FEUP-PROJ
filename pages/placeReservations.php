@@ -7,8 +7,14 @@ include_once '../database/db_room.php';
 include_once '../template/tpl_profile.php';
 
 $id = $_GET['id'];
-$bookings = getOwnerBookings($id);
-print_r($bookings);
+$bookings = getRoomBookings($id);
+$place = getPlace($_GET['id']);
 draw_header();
-draw_bookings($bookings);
-draw_footer();
+?>
+<div class="roomForm">
+<h2><?=$place[0]['title'] ?></h2>
+<?php
+draw_bookings($bookings); ?>
+</div>
+<?php
+draw_footer(); ?>
