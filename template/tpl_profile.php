@@ -1,9 +1,7 @@
 <?php function draw_profile($username, $places, $bookings)
 {?>
 <div class="profile">
-    <div id="imageWrapper">
-        <img src=<?php echo getUserPhoto($_SESSION['username']) ?> alt="Profile picture"">
-    </div>
+    <img src=<?php echo getUserPhoto($_SESSION['username']) ?> alt="Profile picture" width="180px">
     <i class=" material-icons" onclick="location.href ='../pages/editProfile.php'">&#xe8b8;</i>
         <div class="userInfo">
             <h2>Name</h2>
